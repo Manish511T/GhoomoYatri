@@ -209,10 +209,7 @@ html body{
 }
 
 /* tour category */
-.TourCategory{
-    /* background-image: url("River.jpeg"); */
-    background-size: cover;
-}
+
 
 .overlay{
     position: absolute;
