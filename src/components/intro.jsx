@@ -38,7 +38,7 @@ function Introduction() {
         });
 
         tl.fromTo(".card", { y: 100, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.2, ease:"elastic.in", stagger: 0.1 })
+            { y: 0, opacity: 1, duration: 0.2, ease: "elastic.in", stagger: 0.1 })
 
     })
 
@@ -146,19 +146,51 @@ function Introduction() {
                             <p className="text-sm">Valley of Gods</p>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
-            <div className="TourCategory h-150 w-screen flex justify-center items-center relative mt-10 overflow-hidden">
-                {/* <div className='overlay h-full w-full opacity-10 bg-black'></div>
+            <div className="TourCategory h-200 w-screen flex justify-center items-center relative mt-10 overflow-hidden">
+                <div className='overlay h-full w-full opacity-10 bg-black'></div>
                 <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent  z-21 to-black" />
-                <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-teal-950 blur-3xl z-21" /> */}
-                <div className="tourCategory-container flex flex-col justify-between items-center h-full w-full">
-                    <div className='h-[20%] w-full flex justify-center items-center'>
-                        <h1 className='text-5xl font-extrabold'>Tour Category</h1>
-                    </div>
-                    <div className="boxes  h-[80%] w-full">
-                        
+                <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-teal-950 blur-3xl z-21" />
+                <div className="tourCategory-container flex flex-col justify-evenly items-center h-150 w-full gap-5">
+                    <div className="boxes  h-full w-[90%] p-5 mt-5 flex flex-col justify-around items-center">
+                        <h1 className='text-5xl font-extrabold mb-2.5'>Tour Category</h1>
+                        <div className="inner-box h-full w-full flex flex-wrap py-5  gap-2.5 mb-2 bg-transparent justify-center items-center group">
+                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100 hover:shadow-[0_0_30px_#00ffe7,0_0_60px_#00ffe7] cursor-pointer">
+                                <img className='h-full w-full' src="Honeymoon-Packages.jpg" alt="" />
+                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Honeymoon</h1></div>
+                            </div>
+                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100 hover:shadow-[0_0_30px_#00ffe7,0_0_60px_#00ffe7] cursor-pointer">
+                                <img className='h-full w-full' src="Adventure-tour.jpg" alt="" />
+                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Adventure</h1></div>
+                            </div>
+                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100 hover:shadow-[0_0_30px_#00ffe7,0_0_60px_#00ffe7] cursor-pointer">
+                                <img className='h-full w-full' src="Eco-Tourism.jpg" alt="" />
+                                <div className="h-[20%] w-[60%] px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1 >Eco Tourism</h1></div>
+                            </div>
+                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100 hover:shadow-[0_0_30px_#00ffe7,0_0_60px_#00ffe7] cursor-pointer">
+                                <img className='h-full w-full' src="Escorted.jpg" alt="" />
+                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Escorted</h1></div>
+                            </div>
+                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100 hover:shadow-[0_0_30px_#00ffe7,0_0_60px_#00ffe7] cursor-pointer">
+                                <img className='h-full w-full' src="Group-Tour-Packages.jpg" alt="" />
+                                <div className="h-[20%] w-[60%] px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Group Tour</h1></div>
+                            </div>
+                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100 hover:shadow-[0_0_30px_#00ffe7,0_0_60px_#00ffe7] cursor-pointer">
+                                <img className='h-full w-full' src="Leisure.jpg" alt="" />
+                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Leisure</h1></div>
+                            </div>
+                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100 hover:shadow-[0_0_30px_#00ffe7,0_0_60px_#00ffe7] cursor-pointer">
+                                <img className='h-full w-full' src="Pilgrimage-Kedarnath.jpg" alt="" />
+                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Pilgrimage</h1></div>
+                            </div>
+                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100 hover:shadow-[0_0_30px_#00ffe7,0_0_60px_#00ffe7] cursor-pointer">
+                                <img className='h-full w-full' src="Trekking-and-backpacking.jpg" alt="" />
+                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Trekking</h1></div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>

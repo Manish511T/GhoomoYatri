@@ -220,3 +220,27 @@ html body{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+.boxes{
+  background: rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+  backdrop-filter: blur(30px);
+  border-radius: 15px;
+
+}
+
+.box{
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* 
+.box:hover {
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff, 0 0 40px #00f0ff;
+  transform: scale(1.05);
+} */
+
+
+
+.inner-box{
+    overflow-y: scroll;
+}
