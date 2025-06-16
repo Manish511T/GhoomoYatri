@@ -149,7 +149,7 @@ function Introduction() {
 
                 </div>
             </div>
-            <div className="TourCategory h-200 w-screen flex justify-center items-center relative mt-10 overflow-hidden">
+            <div className="TourCategory h-200 w-screen flex justify-center items-center relative mt-10 bg-[url(River.jpeg)] overflow-hidden">
                 <div className='overlay h-full w-full opacity-10 bg-black'></div>
                 <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent  z-21 to-black" />
                 <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-teal-950 blur-3xl z-21" />
