@@ -8,18 +8,25 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    // Simulate loading time (or wait for real resources)
-    const timer = setTimeout(() => {
+    if (document.readyState === 'complete') {
+      // If already loaded
       setLoading(false);
-    }, 2000); // simulate 2s load
+    } else {
+      // Otherwise wait for load
+      const handleLoad = () => {
+        setLoading(false);
+      };
+      window.addEventListener('load', handleLoad);
 
-    return () => clearTimeout(timer);
+      // Cleanup in case component unmounts early
+      return () => window.removeEventListener('load', handleLoad);
+    }
   }, []);
-
-
   return (
     <>
+
     {loading?<Loading />:<Intro /> }
       {/* <Loading />
       <Intro /> */}
