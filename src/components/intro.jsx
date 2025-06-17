@@ -3,28 +3,33 @@ import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-// import Navbar from './Navbar';
+import Navbar from './navbar';
 import { Timeline } from 'gsap/gsap-core';
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 function Introduction() {
+
+
+
+
     useGSAP(() => {
-        gsap.fromTo(".mountain-8", { y: 100 }, { y: -100, duration: 1.5 })
-        gsap.fromTo(".mountain-1", { y: 100 }, { y: -50, duration: 1.5, delay: 0.5 })
-        gsap.fromTo(".mountain-9", { y: 20 }, { y: -200, duration: 1.5, delay: 0.3 })
-        gsap.fromTo(".mountain-7", { y: 20 }, { y: -200, duration: 1.5, delay: 0.3 })
-        gsap.fromTo(".mountain-10", { y: 20 }, { y: -250, duration: 1.5, delay: 0.3 })
-        gsap.fromTo(".mountain-6", { y: 20 }, { y: -200, duration: 1.5, delay: 0.3 })
-        gsap.fromTo(".mountain-5", { y: 20 }, { y: -150, duration: 2, delay: 0.5 })
-        gsap.fromTo(".mountain-4", { y: 100 }, { y: -100, duration: 2, delay: 0.5 })
-        gsap.fromTo(".mountain-2", { y: 100 }, { y: -100, duration: 2, delay: 0.5 })
-        gsap.fromTo(".mountain-3", { y: 100 }, { y: -100, duration: 2, delay: 0.5 })
-        gsap.fromTo(".fog-1", { y: 100 }, { y: -100, duration: 2, delay: 0.5 })
-        gsap.fromTo(".fog-4", { y: 100 }, { y: -100, duration: 2, delay: 0.5 })
-        gsap.fromTo(".fog-6", { y: 100 }, { y: -100, duration: 2, delay: 0.5 })
+        gsap.fromTo(".mountain-8", { y: 150 }, { y: 0, duration: 1.5 })
+        gsap.fromTo(".mountain-1", { y: 100 }, { y: 0, duration: 1.5, delay: 0.5 })
+        gsap.fromTo(".mountain-9", { y: 20 }, { y: 0, duration: 1.5, delay: 0.3 })
+        gsap.fromTo(".mountain-7", { y: 20 }, { y: 0, duration: 1.5, delay: 0.3 })
+        gsap.fromTo(".mountain-10", { y: 20 }, { y: 0, duration: 1.5, delay: 0.3 })
+        gsap.fromTo(".mountain-6", { y: 20 }, { y: 0, duration: 1.5, delay: 0.3 })
+        gsap.fromTo(".mountain-5", { y: 20 }, { y: 0, duration: 2, delay: 0.5 })
+        gsap.fromTo(".mountain-4", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
+        gsap.fromTo(".mountain-2", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
+        gsap.fromTo(".mountain-3", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
+        gsap.fromTo(".fog-1", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
+        gsap.fromTo(".fog-4", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
+        gsap.fromTo(".fog-6", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
         gsap.fromTo('.navbar-container', { y: -50 }, { y: 0, duration: 1, delay: 0.5 })
         gsap.fromTo('.text h2', { y: -200, opacity: 0.08 }, { y: 0, opacity: 1, duration: 2, delay: 1, ease: "sine.inOut" })
         gsap.fromTo('.text h1', { y: 250, opacity: 0.08 }, { y: 0, opacity: 1, duration: 2, delay: 1, ease: "sine.inOut" })
-
+        
+        
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -44,59 +49,52 @@ function Introduction() {
 
     return (
         <>
-            <div className="hero-container h-screen w-screen overflow-hidden">
-                <div className="bg-img-container relative  overflow-hidden z-1">
-                    <img src="background.png" alt="" className="bg-img h-500 w-screen" />
+            <div className="hero-container relative h-screen w-screen overflow-hidden bg-black text-white">
+                
+                {/* Background Image */}
+                <div className="bg-img-container h-200 w-full absolute inset-0 z-0">
+                    <img src="background.png" alt="Background" className="bg-img h-full w-full" />
                 </div>
-                <div className="hero-elements relative h-full w-full">
-                    <img src="fog_7.png" alt="" className="fog-7 z-2" />
-                    <img src="mountain_10.png" alt="" className="mountain-10 z-3" />
-                    <img src="fog_6.png" alt="" className="fog-6 z-4" />
-                    <img src="mountain_9.png" alt="" className="mountain-9 z-5" />
-                    <img src="mountain_8.png" alt="" className="mountain-8 z-6 fixed" />
-                    <img src="fog_5.png" alt="" className="fog-5 z-7" />
-                    <img src="mountain_7.png" alt="" className="mountain-7 z-8" />
-                    <h1 className='text  text-white z-9 flex flex-col justify-center items-center'>
-                        <h2>Journey</h2>
-                        <h1>Begins with GhoomoYatri</h1>
-                    </h1>
-                    <img src="mountain_6.png" alt="" className="mountain-6 z-9" />
-                    <img src="fog_4.png" alt="" className="fog-4 z-10" />
-                    <img src="mountain_5.png" alt="" className="mountain-5 z-11" />
-                    <img src="mountain_4.png" alt="" className="mountain-4 z-12" />
-                    <img src="fog_3.png" alt="" className="fog-3 z-13" />
-                    <img src="mountain_3.png" alt="" className="mountain-3 z-14" />
-                    <img src="fog_2.png" alt="" className="fog-2 z-15" />
-                    <img src="mountain_2.png" alt="" className="mountain-2 z-16" />
-                    <img src="mountain_1.png" alt="" className="mountain-1 z-17" />
-                    <img src="sun_rays.png" alt="" className="sun-rays z-18" />
-                    <img src="black_shadow.png" alt="" className="shadow z-19" />
-                    <img src="fog_1.png" alt="" className="fog-1 z-20" />
+
+                {/* Hero Elements Layer */}
+                <div className="absolute inset-0 z-10">
+                    {/* Fog and Mountains in order */}
+                    <img src="fog_7.png" alt="" className="fog-7 absolute top-[80%] left-1/2 -translate-x-1/2 w-[10vw] z-[2]" />
+                    <img src="mountain_10.png" alt="" className="mountain-10 absolute top-[30%] left-[56%] w-[40vw] z-[3]" />
+                    <img src="fog_6.png" alt="" className="fog-6 absolute top-[50%] left-[45%] w-[55vw] z-[4]" />
+                     <img src="fog_6.png" alt="" className="fog-6 absolute top-[70%] left-[0%] w-[55vw] z-[4]" />
+                    <img src="mountain_9.png" alt="" className="mountain-9 absolute bottom-[0%] left-[12%] w-[18vw] z-[5]" />
+                    <img src="mountain_8.png" alt="" className="mountain-8 absolute bottom-[0%] left-[25%] w-[45vw] z-[6]" />
+                    <img src="fog_5.png" alt="" className="fog-5 absolute -bottom-[20%] left-[40%] w-[20vw] z-[7]" />
+                    <img src="mountain_7.png" alt="" className="montain-7 absolute bottom-[0%] left-[55%] w-[25vw] z-[8]" />
+
+                    {/* Centered Text */}
+                    <div className="text absolute w-full top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[9] text-center">
+                        <h2 className=" text-4xl font-light uppercase">Journey</h2>
+                        <h1 className=" text-7xl font-bold uppercase mt-2">Begins with GhoomoYatri</h1>
+                    </div>
+
+                    <img src="mountain_6.png" alt="" className="mountain-6 absolute bottom-[0%] left-[70%] w-[15vw] z-[10]" />
+                    <img src="fog_4.png" alt="" className="fog-4 absolute -bottom-[35%] left-[50%] w-[40vw] z-[11]" />
+                    <img src="mountain_5.png" alt="" className="mountain-5 absolute -bottom-[10%] left-[45%] w-[25vw] z-[12]" />
+                    <img src="mountain_4.png" alt="" className="mountain-4 absolute -bottom-[5%] left-[6%] w-[40vw] z-[13]" />
+                    <img src="fog_3.png" alt="" className="fog-3 absolute -bottom-[25%] left-[40%] w-[50vw] z-[14]" />
+                    <img src="mountain_3.png" alt="" className="mountain-3 absolute bottom-[0%] left-[80%] w-[20vw] z-[15]" />
+                    <img src="fog_2.png" alt="" className="fog-2 absolute top-[80%] left-[10%] w-[40vw] z-[16]" />
+                    <img src="mountain_2.png" alt="" className="mountain-2 absolute bottom-[0%] left-[60%] w-[25vw] z-[17]" />
+                    <img src="mountain_1.png" alt="" className="mountain-1 absolute -bottom-[5%] -left-[6%] w-[30vw] z-[18]" />
+                    <img src="sun_rays.png" alt="" className="absolute top-0 right-0 w-[35vw] z-[19]" />
+                    <img src="black_shadow.png" alt="" className=" absolute bottom-0 left-0 w-full z-[20]" />
+                    <img src="fog_1.png" alt="" className="fog-1 absolute -bottom-[55%] left-0 w-full z-[21]" />
                 </div>
+
+                {/* Gradient Overlays */}
+                <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black z-[22]" />
+                <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-emerald-900 blur-3xl z-[23]" />
+
             </div>
-            <div className='navbar-container text-black h-14 w-screen bg-transparent absolute  top-0 left-0 flex justify-between items-center  mt-2 z-50'>
-                <div className='navbar-item h-full w-full flex justify-evenly items-center  p-2'>
-                    <div className="logo h-full w-14  flex justify-center items-center">
-                        <img className='cursor-pointer' src="Logo.png" />
-                    </div>
-                    <div className="menu-box flex justify-between items-center w-3/6   text-sm font-semibold">
-                        <div className='cursor-pointer  '>HOME</div>
-                        <div className='cursor-pointer'>DOMESTIC</div>
-                        <div className='cursor-pointer'>INTERNATIONAL</div>
-                        <div className='cursor-pointer'>CONTACT</div>
-                        <div className='group cursor-pointer'>ABOUT<i className="ri-arrow-right-up-line inline-block transition-transform duration-300 group-hover:rotate-90"></i></div>
-                    </div>
-                    <div>
-                        <div className='h-2 p-4  flex items-center  text-sm  border   border-black rounded-4xl '>
-                            <div >
-                                <input type="text" placeholder='Search' className='border-none focus:outline-none ' /><i className="ri-search-line text-sm cursor-pointer"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent  z-21 to-black" />
-            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-emerald-900 blur-3xl z-21" />
+            <Navbar/>
+
             {/* Popular places cards */}
             <div className='popular-places bg-[#000]  text-white  p-10 relative'>
                 <div className="title-container h-3/12 gap-2  border-t w-full flex flex-col justify-center items-center">
@@ -192,7 +190,7 @@ function Introduction() {
                                 <img className='h-full w-full' src="Trekking-and-backpacking.jpg" alt="" />
                                 <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Trekking</h1></div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

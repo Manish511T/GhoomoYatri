@@ -4,201 +4,122 @@
     display: none;
 }
 
-.bg-img-container{
-    height: 100vh;
-    width: 100vw;
-}
-
 html body{
     background-color: black;
     color: #fff;
     scroll-behavior: smooth;
 }
 
+
+/* loading */
+.wrapper {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 .5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 0%;
+  }
+}
+
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: .2s;
+}
+
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow046 .5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+
+  40% {
+    transform: scaleX(1);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scaleX(.2);
+    opacity: .4;
+  }
+}
+
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: .2s
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+
+
+
+
+/* hero section */
+
+ /* .bg-img-container{
+    height: 100vh;
+    width: 100vw;
+} */
+
+
 .bg-img-container img{
     position: absolute;
-    top: calc(60% - 390px);
+    top: calc(55% - 250px);
     left: calc(50%);
     transform: translate(-50%,-50%);
+    object-fit: cover;
 }
 
-.fog-7{
-    position: absolute;
-    top: calc(20% - 390px);
-    left: calc(50% + 200px);
-    transform: translate(-50%,-50%);
-}
-
-.mountain-10{
-    width: 50vw;
-    position: absolute;
-    top: calc(20% - 420px);
-    left: calc(60% + 200px);
-    transform: translate(-50%,-50%);
-}
-
-.fog-6{
-
-    position: absolute;
-    top: calc(30% - 390px);
-    left: calc(40% + 200px);
-    transform: translate(-50%,-50%);
-}
-
-.mountain-9{
-    height: 70vh;
-    position: absolute;
-    top: calc(20% - 350px);
-    left: calc(10% + 50px);
-    transform: translate(-50%,-50%);
-}
-
-.mountain-8{
-    height: 80vh;
-    position: absolute;
-    top: calc(30% - 400px);
-    left: calc(15% + 100px);
-    transform: translate(-50%,-50%);
-}
-
-.text{
-    /* background-color: coral; */
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: calc(5% - 500px);
-    left: calc(50% + 50px);
-    transform: translate(-50%,-50%);
-    text-align: center;
-    text-transform: uppercase;
-    color: #fff;
-    line-height: 0.9;
-
-    
-}
-
-.text h2{
-    font-size: 4rem;
-    font-weight: 100;
-}
-
-
-.text h1{
-    font-weight: 800;
-    font-size: 5.5rem;
-}
-
-
-.fog-5{
-    position: absolute;
-    top: calc(60% - 400px);
-    left: calc(30% + 200px);
-    transform: translate(-50%,-50%);
-}
-
-.mountain-7{
-    height: 70vh;
-    position: absolute;
-    top: calc(20% - 490px);
-    left: calc(30% + 380px);
-    transform: translate(-50%,-50%);
-}
-
-.mountain-6{
-    height: 70vh;
-    position: absolute;
-    top: calc(35% - 500px);
-    left: calc(50% + 450px);
-    transform: translate(-50%,-50%);
-}
-
-.fog-4{
-    position: absolute;
-    top: calc(55% - 400px);
-    left: calc(50% + 200px);
-    transform: translate(-50%,-50%);
-}
-
-.mountain-5{
-    height: 50vh;
-    position: absolute;
-    top: calc(50% - 350px);
-    left: calc(20% + 380px);
-    transform: translate(-50%,-50%);
-}
-
-.mountain-4{
-    height: 65vh;
-    position: absolute;
-    top: calc(50% - 455px);
-    left: calc(10% + 50px);
-    transform: translate(-50%,-50%);
-}
-
-.fog-3{
-    position: absolute;
-    top: calc(40% - 400px);
-    left: calc(40% + 200px);
-    transform: translate(-50%,-50%);
-}
-
-.mountain-3{
-    height: 60vh;
-    position: absolute;
-    top: calc(45% - 450px);
-    left: calc(80% + 70px);
-    transform: translate(-50%,-50%);
-}
-
-
-.fog-2{
-    position: absolute;
-    top: calc(40% - 400px);
-    left: calc(40% + 200px);
-    transform: translate(-50%,-50%);
-}
-
-.mountain-2{
-    height: 70vh;
-    position: absolute;
-    top: calc(15% - 450px);
-    left: calc(55% + 60px);
-    transform: translate(-50%,-50%);
-}
-
-.mountain-1{
-    height: 100vh;
-    width: 30vw;
-    position: absolute;
-    top: calc(30% - 500px);
-    left: calc(9% + 7px);
-    transform: translate(-50%,-50%);
-}
-
-.sun-rays{
-    height: 60vh;
-    position: absolute;
-    top: calc(0% - 490px);
-    left: calc(100% + 60px);
-    transform: translate(-50%,-50%);
-}
-
-
-.shadow{
-    width: 100vw;
-    position: absolute;
-    top: calc(40% - 400px);
-    left: calc(40% + 200px);
-    transform: translate(-50%,-50%);
-}
-
-.fog-1{
-    width: 100vw;
-    position: absolute;
-    top: calc(30% - 400px);
-    left: calc(40% + 200px);
-    transform: translate(-50%,-50%);
-}
 
 
 /* popular place cards */
