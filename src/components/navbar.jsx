@@ -8,17 +8,17 @@ function navbar() {
   }, []);
   return (
     <>
-    <div className='navbar-container text-black h-14 w-screen bg-transparent absolute  top-0 left-0 flex justify-between items-center  mt-2'>
+    <div className='navbar-container z-50 text-black h-14 w-screen bg-transparent absolute  top-0 left-0 flex justify-between items-center  mt-2'>
         <div className='navbar-item h-full w-full flex justify-evenly items-center  p-2'>
            <div className="logo h-full w-14  flex justify-center items-center">
             <img className='cursor-pointer' src="Logo.png" />
           </div>
             <div className="menu-box flex justify-between items-center w-3/6   text-sm font-semibold">
-            <div className='cursor-pointer  '>HOME</div>
-            <div className='cursor-pointer'>DOMESTIC</div>
-            <div className='cursor-pointer'>INTERNATIONAL</div>
-            <div className='cursor-pointer'>CONTACT</div>
-            <div className='group cursor-pointer'>ABOUT<i className="ri-arrow-right-up-line inline-block transition-transform duration-300 group-hover:rotate-90"></i></div>
+            <div className='cursor-pointer hover:scale-110 '>HOME</div>
+            <div className='cursor-pointer hover:scale-110'>DOMESTIC</div>
+            <div className='cursor-pointer hover:scale-110'>INTERNATIONAL</div>
+            <div className='cursor-pointer hover:scale-110'>CONTACT</div>
+            <div className='group cursor-pointer hover:scale-110' hover:scale-110>ABOUT<i className="ri-arrow-right-up-line inline-block transition-transform duration-300 group-hover:rotate-90"></i></div>
           </div>
            <div>
             <div className='h-2 p-4  flex items-center  text-sm  border  border-black rounded-4xl '>
