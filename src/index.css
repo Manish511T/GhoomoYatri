@@ -5,7 +5,7 @@
 }
 
 html body{
-    background-color: black;
+    /* background-color: black; */
     color: #fff;
     scroll-behavior: smooth;
 }
@@ -125,9 +125,10 @@ html body{
 /* popular place cards */
 
 .popular-places{
-    height: 600px;
+    height: 60vh;
     width: 100vw;
 }
+
 
 /* tour category */
 
@@ -161,4 +162,11 @@ html body{
 
 .inner-box{
     overflow-y: scroll;
+}
+
+
+
+/* Domestic Tour */
+.domestic-card-container .card{
+  cursor: pointer;
 }

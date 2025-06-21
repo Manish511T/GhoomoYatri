@@ -28,8 +28,8 @@ function Introduction() {
         gsap.fromTo('.navbar-container', { y: -50 }, { y: 0, duration: 1, delay: 0.5 })
         gsap.fromTo('.text h2', { y: -200, opacity: 0.08 }, { y: 0, opacity: 1, duration: 1.3, delay: 1, ease: "sine.in" })
         gsap.fromTo('.text h1', { y: 250, opacity: 0.08 }, { y: 0, opacity: 1, duration: 1.3, delay: 1, ease: "sine.in" })
-        
-        
+
+
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -45,12 +45,13 @@ function Introduction() {
         tl.fromTo(".card", { y: 100, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.2, ease: "elastic.in", stagger: 0.1 })
 
+
     })
 
     return (
         <>
-            <div className="hero-container relative h-screen w-screen overflow-hidden bg-black text-white">
-                
+            <div className="hero-container relative h-screen w-screen overflow-hidden rounded-b-2xl bg-black text-white">
+
                 {/* Background Image */}
                 <div className="bg-img-container h-200 w-full absolute inset-0 z-0">
                     <img src="background.png" alt="Background" className="bg-img h-full w-full" />
@@ -62,7 +63,7 @@ function Introduction() {
                     <img src="fog_7.png" alt="" className="fog-7 absolute top-[80%] left-1/2 -translate-x-1/2 w-[10vw] z-[2]" />
                     <img src="mountain_10.png" alt="" className="mountain-10 absolute top-[30%] left-[56%] w-[40vw] z-[3]" />
                     <img src="fog_6.png" alt="" className="fog-6 absolute top-[50%] left-[45%] w-[55vw] z-[4]" />
-                     <img src="fog_6.png" alt="" className="fog-6 absolute top-[70%] left-[0%] w-[55vw] z-[4]" />
+                    <img src="fog_6.png" alt="" className="fog-6 absolute top-[70%] left-[0%] w-[55vw] z-[4]" />
                     <img src="mountain_9.png" alt="" className="mountain-9 absolute bottom-[0%] left-[12%] w-[18vw] z-[5]" />
                     <img src="mountain_8.png" alt="" className="mountain-8 absolute bottom-[0%] left-[25%] w-[45vw] z-[6]" />
                     <img src="fog_5.png" alt="" className="fog-5 absolute -bottom-[20%] left-[40%] w-[20vw] z-[7]" />
@@ -93,68 +94,48 @@ function Introduction() {
                 <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-emerald-900 blur-3xl z-[23]" />
 
             </div>
-            <Navbar/>
+            <Navbar />
 
             {/* Popular places cards */}
-            <div className='popular-places bg-[#000]  text-white  p-10 relative'>
-                <div className="title-container h-3/12 gap-2  border-t w-full flex flex-col justify-center items-center">
-                    <h1 className='text-3xl font-semibold text-emerald-500 ' >POPULAR PLACES</h1>
-                    <h6 className='text-sm font-light '>Discover handpicked destinations loved by travelers around the world.</h6>
+            <div className='popular-places text-white  relative mt-5'>
+                {/* Section Title */}
+                <div className="title-container  w-full flex flex-col justify-center items-center">
+                    <h1 className='text-3xl font-bold text-emerald-500'>POPULAR PLACES</h1>
+                    <h6 className='text-sm  text-black font-light'>Discover handpicked destinations loved by travelers around the world.</h6>
                 </div>
-                <div className="cards h-3/4  p-5 w-full px-10 flex justify-evenly items-center gap-5 ">
-                    <div className="group card h-full w-[18%] cursor-pointer  overflow-hidden rounded-lg shadow-2xl hover:shadow-cyan-800  hover:scale-105 transform transition duration-300 ease-in-out ">
-                        <img className='h-full w-full object-cover transform transition duration-800 group-hover:scale-110 ' src="shimla.jpeg" alt="" />
-                        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
-                            <h3 className="text-xl font-bold">Shimla</h3>
-                            <p className="text-sm">Queen of Hills</p>
-                        </div>
-                    </div>
-                    <div className="group card h-full w-[18%] cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:shadow-lime-800  hover:scale-105 transform transition duration-300 ease-in-out ">
-                        <img className='h-full w-full object-cover transform transition duration-800 group-hover:scale-110 ' src="Coorg.jpeg" alt="" />
-                        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
-                            <h3 className="text-xl font-bold">Coorg</h3>
-                            <p className="text-sm">Scotland of India</p>
-                        </div>
-                    </div>
-                    <div className="group card h-full w-[18%] cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:shadow-gray-600  hover:scale-105 transform transition duration-300 ease-in-out ">
-                        <img className='h-full w-full object-cover transform transition duration-800 group-hover:scale-110 ' src="Ladakh.jpeg" alt="" />
-                        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
-                            <h3 className="text-xl font-bold">Ladakh</h3>
-                            <p className="text-sm">The Moonland</p>
-                        </div>
-                    </div>
-                    <div className="group card h-full w-[18%] cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:shadow-lime-800  hover:scale-105 transform transition duration-300 ease-in-out ">
-                        <img className='h-full w-full object-cover transform transition duration-800 group-hover:scale-110 ' src="Darjeeling.jpeg" alt="" />
-                        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
-                            <h3 className="text-xl font-bold">Darjeeling</h3>
-                            <p className="text-sm">The land of the thunderbolt</p>
-                        </div>
-                    </div>
-                    <div className="group card h-full w-[18%] cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:shadow-lime-800  hover:scale-105 transform transition duration-300 ease-in-out ">
-                        <img className='h-full w-full object-cover transform transition duration-800 group-hover:scale-110 ' src="Ooty.jpeg" alt="" />
-                        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
-                            <h3 className="text-xl font-bold">Ooty</h3>
-                            <p className="text-sm">Queen of Hill stations</p>
-                        </div>
-                    </div>
-                    <div className="group card h-full w-[18%] cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:shadow-cyan-800  hover:scale-105 transform transition duration-300 ease-in-out ">
-                        <img className='h-full w-full object-cover transform transition duration-800 group-hover:scale-110 ' src="Manali.jpeg" alt="" />
-                        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
-                            <h3 className="text-xl font-bold">Manali</h3>
-                            <p className="text-sm">Valley of Gods</p>
-                        </div>
-                    </div>
 
+                {/* Scrollable Cards */}
+                <div className="cards-container overflow-x-auto  h-full w-full mt-5">
+                    <div className="cards flex gap-6 w-max px-10 flex-nowrap">
+                        {[
+                            { name: "Shimla", tag: "Queen of Hills", img: "shimla.jpeg", shadow: "shadow-cyan-800" },
+                            { name: "Coorg", tag: "Scotland of India", img: "Coorg.jpeg", shadow: "shadow-lime-800" },
+                            { name: "Ladakh", tag: "The Moonland", img: "Ladakh.jpeg", shadow: "shadow-gray-600" },
+                            { name: "Darjeeling", tag: "The land of the thunderbolt", img: "Darjeeling.jpeg", shadow: "shadow-lime-800" },
+                            { name: "Ooty", tag: "Queen of Hill stations", img: "Ooty.jpeg", shadow: "shadow-lime-800" },
+                            { name: "Manali", tag: "Valley of Gods", img: "Manali.jpeg", shadow: "shadow-cyan-800" }
+                        ].map((place, idx) => (
+                            <div key={idx} className={`group card relative min-w-[250px] h-[300px] cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:${place.shadow} hover:scale-105 transform transition duration-300 ease-in-out`}>
+                                <img className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' src={place.img} alt={place.name} />
+                                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
+                                    <h3 className="text-xl font-bold">{place.name}</h3>
+                                    <p className="text-sm">{place.tag}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
+
             {/* tour category section */}
-            <div className="TourCategory h-200 w-screen flex justify-center items-center relative mt-10  overflow-hidden">
+            <div className="TourCategory h-200 w-screen flex justify-center items-center relative   overflow-hidden">
+
                 <div className="tourCategory-bg h-full w-full absolute">
                     <img className='h-full w-full' src="River.jpeg" alt="" />
                 </div>
                 <div className='overlay h-full w-full opacity-10 bg-black'></div>
-                <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent  z-21 to-black" />
-                <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-teal-950 blur-3xl z-21" />
+                <div className="absolute top-0 left-0 w-full h-30 bg-gradient-to-t from-transparent  z-21 to-black" />
+                {/* <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-teal-950 blur-3xl z-21" /> */}
                 <div className="tourCategory-container flex flex-col justify-evenly items-center h-150 w-full gap-5">
                     <div className="boxes  h-full w-[90%] p-5 mt-5 flex flex-col justify-around items-center">
                         <h1 className='text-5xl font-extrabold mb-2.5'>Tour Category</h1>
@@ -195,6 +176,91 @@ function Introduction() {
                         </div>
                     </div>
                 </div>
+                {/* <div className="absolute -0 bottom-0 left-0 w-full h-30 bg-gradient-to-b from-transparent  z-21 to-black  " /> */}
+                <div className="absolute bottom-0 left-0 w-full h-30 bg-gradient-to-b from-transparent  z-20 to-black " />
+            </div>
+
+            {/* domestic tours */}
+            <div className="domestic-tour-wrapper bg-amber-50 h-190 w-screen overflow-hidden flex flex-col justify-center items-center  relative">
+                <div className='w-screen flex justify-center items-center m-5'>
+                    <h1 className='text-[#1A2B48] text-5xl font-semibold'>DOMESTIC</h1>
+                </div>
+                <div className="domestic-card-container flex flex-wrap justify-evenly items-center w-[90%] h-full  mb-10 relative overflow-y-auto p-2 gap-2">
+                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
+                        <img src="Goa.jpg" alt="" className='h-full w-full object-cover' />
+                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
+                            <h1 className='text-4xl  '>Goa</h1>
+                            <h7>19 Tours</h7>
+                        </div>
+                    </div>
+                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
+                        <img src="Himachal-Pradesh.jpg" alt="" className='h-full w-full object-cover' />
+                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
+                            <h1 className='text-4xl  '>Himachal Pradesh</h1>
+                            <h7>13 Tours</h7>
+                        </div>
+                    </div>
+                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
+                        <img src="northeast-history.jpg" alt="" className='h-full w-full object-cover' />
+                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
+                            <h1 className='text-4xl  '>Northeast</h1>
+                            <h7>5 Tours</h7>
+                        </div>
+                    </div>
+                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
+                        <img src="Uttarakhand.webp" alt="" className='h-full w-full object-cover' />
+                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
+                            <h1 className='text-4xl  '>Uttrakhand</h1>
+                            <h7>13 Tours</h7>
+                        </div>
+                    </div>
+                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
+                        <img src="Pangong-Lake.jpg" alt="" className='h-full w-full object-cover' />
+                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
+                            <h1 className='text-4xl '>Ladkh</h1>
+                            <h7>7 Tours</h7>
+                        </div>
+                    </div>
+                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
+                        <img src="Kashmir.jpg" alt="" className='h-full w-full object-cover' />
+                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
+                            <h1 className='text-4xl  '>Kashmir</h1>
+                            <h7>9 Tours</h7>
+                        </div>
+                    </div>
+                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
+                        <img src="kerala.webp" alt="" className='h-full w-full object-cover' />
+                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
+                            <h1 className='text-4xl  '>Kerala</h1>
+                            <h7>7 Tours</h7>
+                        </div>
+                    </div>
+                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
+                        <img src="Andaman.jpg" alt="" className='h-full w-full object-cover' />
+                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
+                            <h1 className='text-4xl  '>Andaman</h1>
+                            <h7>5 Tours</h7>
+                        </div>
+                    </div>
+                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
+                        <img src="Rajasthan.jpg" alt="" className='h-full w-full object-cover' />
+                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
+                            <h1 className='text-4xl'>Rajasthan</h1>
+                            <h7>19 Tours</h7>
+                        </div>
+                    </div>
+                </div>
+                
+
             </div>
 
 

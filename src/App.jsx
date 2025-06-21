@@ -27,7 +27,7 @@ function App() {
   return (
     <>
 
-    {loading?<Loading />:<Intro /> }
+    {loading?<Loading/>:<Intro/> }
       {/* <Loading />
       <Intro /> */}
     </>
