@@ -186,73 +186,73 @@ function Introduction() {
                     <h1 className='text-[#1A2B48] text-5xl font-semibold'>DOMESTIC</h1>
                 </div>
                 <div className="domestic-card-container flex flex-wrap justify-evenly items-center w-[90%] h-full  mb-10 relative overflow-y-auto p-2 gap-2">
-                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
-                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Goa.jpg" alt="" className='h-full w-full object-cover' />
+                    <div className="card group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%] '></div>
+                        <img src="Goa.jpg" alt="" className=' h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Goa</h1>
                             <h7>19 Tours</h7>
                         </div>
                     </div>
-                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Himachal-Pradesh.jpg" alt="" className='h-full w-full object-cover' />
+                        <img src="Himachal-Pradesh.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Himachal Pradesh</h1>
                             <h7>13 Tours</h7>
                         </div>
                     </div>
-                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="northeast-history.jpg" alt="" className='h-full w-full object-cover' />
+                        <img src="northeast-history.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Northeast</h1>
                             <h7>5 Tours</h7>
                         </div>
                     </div>
-                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Uttarakhand.webp" alt="" className='h-full w-full object-cover' />
+                        <img src="Uttarakhand.webp" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Uttrakhand</h1>
                             <h7>13 Tours</h7>
                         </div>
                     </div>
-                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Pangong-Lake.jpg" alt="" className='h-full w-full object-cover' />
+                        <img src="Pangong-Lake.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl '>Ladkh</h1>
                             <h7>7 Tours</h7>
                         </div>
                     </div>
-                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Kashmir.jpg" alt="" className='h-full w-full object-cover' />
+                        <img src="Kashmir.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Kashmir</h1>
                             <h7>9 Tours</h7>
                         </div>
                     </div>
-                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="kerala.webp" alt="" className='h-full w-full object-cover' />
+                        <img src="kerala.webp" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Kerala</h1>
                             <h7>7 Tours</h7>
                         </div>
                     </div>
-                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Andaman.jpg" alt="" className='h-full w-full object-cover' />
+                        <img src="Andaman.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Andaman</h1>
                             <h7>5 Tours</h7>
                         </div>
                     </div>
-                    <div className="card h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
+                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Rajasthan.jpg" alt="" className='h-full w-full object-cover' />
+                        <img src="Rajasthan.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl'>Rajasthan</h1>
                             <h7>19 Tours</h7>
