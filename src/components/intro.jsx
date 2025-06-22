@@ -1,4 +1,4 @@
-import React, { use, useEffect } from 'react'
+import React, { use, useEffect, useRef } from 'react'
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -6,10 +6,22 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import Navbar from './navbar';
 import { Timeline } from 'gsap/gsap-core';
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
+
+
+const cards = [
+    { name: "Dubai", img: "Dubai.jpg", shadow: "shadow-cyan-800" },
+    { name: "Indonesia", img: "Indonesia.jpg", shadow: "shadow-lime-800" },
+    { name: "Mauritius", img: "Mauritius.jpg", shadow: "shadow-gray-600" },
+    { name: "Singapore", img: "Singapore.jpg", shadow: "shadow-lime-800" },
+    { name: "Sri-Lanka", img: "Sri-Lanka.jpg", shadow: "shadow-lime-800" },
+    { name: "Thailand", img: "thailand.jpg", shadow: "shadow-cyan-800" },
+    { name: "Vietnam", img: "Vietnam.jpg", shadow: "shadow-cyan-800" }
+];
+
 function Introduction() {
 
 
-
+    const cardsRef = useRef(null);
 
     useGSAP(() => {
         gsap.fromTo(".mountain-8", { y: 150 }, { y: 0, duration: 1.5 })
@@ -29,8 +41,6 @@ function Introduction() {
         gsap.fromTo('.text h2', { y: -200, opacity: 0.08 }, { y: 0, opacity: 1, duration: 1.3, delay: 1, ease: "sine.in" })
         gsap.fromTo('.text h1', { y: 250, opacity: 0.08 }, { y: 0, opacity: 1, duration: 1.3, delay: 1, ease: "sine.in" })
 
-
-
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".title-container",
@@ -45,8 +55,25 @@ function Introduction() {
         tl.fromTo(".card", { y: 100, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.2, ease: "elastic.in", stagger: 0.1 })
 
+        //international tour
+        const cardsEl = cardsRef.current;
+        const cardWidth = cardsEl.scrollWidth / 2;
+
+        const loop = gsap.to(cardsEl, {
+            x: `-=${cardWidth}px`,
+            duration: 20,
+            ease: "linear",
+            repeat: -1,
+            modifiers: {
+                x: gsap.utils.unitize(x => parseFloat(x) % cardWidth) // loop after reaching half
+            }
+        });
+
+        return () => loop.kill();
 
     })
+
+
 
     return (
         <>
@@ -128,56 +155,53 @@ function Introduction() {
             </div>
 
             {/* tour category section */}
-            <div className="TourCategory h-200 w-screen flex justify-center items-center relative   overflow-hidden">
-
+            <div className="TourCategory h-200 w-screen flex justify-center items-center relative overflow-hidden">
+                {/* Background Image */}
                 <div className="tourCategory-bg h-full w-full absolute">
-                    <img className='h-full w-full' src="River.jpeg" alt="" />
+                    <img className="h-full w-full object-cover" src="River.jpeg" alt="" />
                 </div>
-                <div className='overlay h-full w-full opacity-10 bg-black'></div>
-                <div className="absolute top-0 left-0 w-full h-30 bg-gradient-to-t from-transparent  z-21 to-black" />
-                {/* <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-teal-950 blur-3xl z-21" /> */}
-                <div className="tourCategory-container flex flex-col justify-evenly items-center h-150 w-full gap-5">
-                    <div className="boxes  h-full w-[90%] p-5 mt-5 flex flex-col justify-around items-center">
-                        <h1 className='text-5xl font-extrabold mb-2.5'>Tour Category</h1>
-                        <div className="inner-box h-full w-full flex flex-wrap py-5  gap-2.5 mb-2 bg-transparent justify-center items-center group">
-                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100  cursor-pointer">
-                                <img className='h-full w-full' src="Honeymoon-Packages.jpg" alt="" />
-                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Honeymoon</h1></div>
-                            </div>
-                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100  cursor-pointer">
-                                <img className='h-full w-full' src="Adventure-tour.jpg" alt="" />
-                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Adventure</h1></div>
-                            </div>
-                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100  cursor-pointer">
-                                <img className='h-full w-full' src="Eco-Tourism.jpg" alt="" />
-                                <div className="h-[20%] w-[60%] px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1 >Eco Tourism</h1></div>
-                            </div>
-                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100  cursor-pointer">
-                                <img className='h-full w-full' src="Escorted.jpg" alt="" />
-                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Escorted</h1></div>
-                            </div>
-                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100  cursor-pointer">
-                                <img className='h-full w-full' src="Group-Tour-Packages.jpg" alt="" />
-                                <div className="h-[20%] w-[60%] px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Group Tour</h1></div>
-                            </div>
-                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100  cursor-pointer">
-                                <img className='h-full w-full' src="Leisure.jpg" alt="" />
-                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Leisure</h1></div>
-                            </div>
-                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100  cursor-pointer">
-                                <img className='h-full w-full' src="Pilgrimage-Kedarnath.jpg" alt="" />
-                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Pilgrimage</h1></div>
-                            </div>
-                            <div className="box relative h-60 w-72 overflow-hidden rounded-lg transition-all duration-300 ease-in-out group-hover:opacity-40 hover:!opacity-100  cursor-pointer">
-                                <img className='h-full w-full' src="Trekking-and-backpacking.jpg" alt="" />
-                                <div className="h-[20%] w-fit px-8 font-semibold text-lg bg-black opacity-70  flex justify-center items-center border tour-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><h1>Trekking</h1></div>
-                            </div>
 
+                {/* Dark Overlay */}
+                <div className="overlay h-full w-full opacity-10 bg-black absolute top-0 left-0"></div>
+                <div className="absolute top-0 left-0 w-full h-30 bg-gradient-to-t from-transparent to-black z-21" />
+
+                {/* Main Container */}
+                <div className="tourCategory-container flex flex-col justify-evenly items-center h-150 w-full gap-5 relative z-10">
+                    <div className="boxes h-full w-[90%] p-5 mt-5 flex flex-col justify-around items-center">
+                        <h1 className="text-5xl font-extrabold mb-2.5 text-white">Tour Category</h1>
+
+                        {/* CARD GRID */}
+                        <div className="inner-box h-full w-full flex flex-wrap justify-center items-center gap-4 py-5">
+                            {[
+                                { name: "Honeymoon", img: "Honeymoon-Packages.jpg" },
+                                { name: "Adventure", img: "Adventure-tour.jpg" },
+                                { name: "Eco Tourism", img: "Eco-Tourism.jpg" },
+                                { name: "Escorted", img: "Escorted.jpg" },
+                                { name: "Group Tour", img: "Group-Tour-Packages.jpg" },
+                                { name: "Leisure", img: "Leisure.jpg" },
+                                { name: "Pilgrimage", img: "Pilgrimage-Kedarnath.jpg" },
+                                { name: "Trekking", img: "Trekking-and-backpacking.jpg" }
+                            ].map((card, idx) => (
+                                <div
+                                    key={idx}
+                                    className="group/card relative h-52 w-72 overflow-hidden rounded-lg cursor-pointer transition-all duration-300 ease-in-out"
+                                >
+                                    <img
+                                        className="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-105"
+                                        src={card.img}
+                                        alt={card.name}
+                                    />
+                                    <div className="absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/70 px-6 py-2 text-white font-semibold text-lg rounded">
+                                        {card.name}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
-                {/* <div className="absolute -0 bottom-0 left-0 w-full h-30 bg-gradient-to-b from-transparent  z-21 to-black  " /> */}
-                <div className="absolute bottom-0 left-0 w-full h-30 bg-gradient-to-b from-transparent  z-20 to-black " />
+
+                {/* Bottom Gradient */}
+                <div className="absolute bottom-0 left-0 w-full h-30 bg-gradient-to-b from-transparent to-black z-20" />
             </div>
 
             {/* domestic tours */}
@@ -188,7 +212,7 @@ function Introduction() {
                 <div className="domestic-card-container flex flex-wrap justify-evenly items-center w-[90%] h-full  mb-10 relative overflow-y-auto p-2 gap-2">
                     <div className="card group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%] '></div>
-                        <img src="Goa.jpg" alt="" className=' h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
+                        <img src="Goa.jpg" alt="" className=' h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Goa</h1>
                             <h7>19 Tours</h7>
@@ -196,7 +220,7 @@ function Introduction() {
                     </div>
                     <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Himachal-Pradesh.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
+                        <img src="Himachal-Pradesh.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Himachal Pradesh</h1>
                             <h7>13 Tours</h7>
@@ -204,7 +228,7 @@ function Introduction() {
                     </div>
                     <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="northeast-history.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
+                        <img src="northeast-history.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Northeast</h1>
                             <h7>5 Tours</h7>
@@ -212,7 +236,7 @@ function Introduction() {
                     </div>
                     <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Uttarakhand.webp" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
+                        <img src="Uttarakhand.webp" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Uttrakhand</h1>
                             <h7>13 Tours</h7>
@@ -220,7 +244,7 @@ function Introduction() {
                     </div>
                     <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Pangong-Lake.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
+                        <img src="Pangong-Lake.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl '>Ladkh</h1>
                             <h7>7 Tours</h7>
@@ -228,7 +252,7 @@ function Introduction() {
                     </div>
                     <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Kashmir.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
+                        <img src="Kashmir.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Kashmir</h1>
                             <h7>9 Tours</h7>
@@ -236,7 +260,7 @@ function Introduction() {
                     </div>
                     <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="kerala.webp" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
+                        <img src="kerala.webp" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Kerala</h1>
                             <h7>7 Tours</h7>
@@ -244,7 +268,7 @@ function Introduction() {
                     </div>
                     <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Andaman.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
+                        <img src="Andaman.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl  '>Andaman</h1>
                             <h7>5 Tours</h7>
@@ -252,16 +276,46 @@ function Introduction() {
                     </div>
                     <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
                         <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Rajasthan.jpg" alt="" className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' />
+                        <img src="Rajasthan.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
                         <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
                             <h1 className='text-4xl'>Rajasthan</h1>
                             <h7>19 Tours</h7>
                         </div>
                     </div>
                 </div>
-                
+
 
             </div>
+
+            {/* International tour */}
+            <div className="international-tour-wrapper h-100 w-screen flex flex-col justify-center items-center">
+                <div className='w-screen flex justify-center items-center m-5'>
+                    <h1 className='text-[#1A2B48] text-5xl font-semibold'>INTERNATIONAL</h1>
+                </div>
+                <div className="cards-container overflow-hidden h-full w-[90%] mt-5 relative">
+                    <div
+                        ref={cardsRef}
+                        className="cards flex gap-6 h-full w-max py-2 px-10 flex-nowrap"
+                    >
+                        {[...cards, ...cards].map((place, idx) => (
+                            <div
+                                key={idx}
+                                className={`group card relative h-60 w-60 rounded-full cursor-pointer overflow-hidden shadow-2xl shadow-black hover:${place.shadow} hover:scale-105 transform transition duration-400 ease-in-out`}
+                            >
+                                <img
+                                    className="h-full w-full object-cover transform transition duration-500 group-hover:scale-110"
+                                    src={place.img}
+                                    alt={place.name}
+                                />
+                                <div className="absolute top-[50%] left-[50%] w-full transform -translate-x-[50%] -translate-y-[50%] p-4 text-white text-center">
+                                    <h3 className="text-2xl font-bold">{place.name}</h3>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
 
 
 
