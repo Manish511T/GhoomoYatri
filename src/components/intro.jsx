@@ -155,54 +155,54 @@ function Introduction() {
             </div>
 
             {/* tour category section */}
-<div className="TourCategory h-200 w-screen flex justify-center items-center relative overflow-hidden">
-  {/* Background Image */}
-  <div className="tourCategory-bg h-full w-full absolute">
-    <img className="h-full w-full object-cover" src="River.jpeg" alt="" />
-  </div>
+            <div className="TourCategory h-200 w-screen flex justify-center items-center relative overflow-hidden">
+                {/* Background Image */}
+                <div className="tourCategory-bg h-full w-full absolute">
+                    <img className="h-full w-full object-cover" src="River.jpeg" alt="" />
+                </div>
 
-  {/* Dark Overlay */}
-  <div className="overlay h-full w-full opacity-10 bg-black absolute top-0 left-0"></div>
-  <div className="absolute top-0 left-0 w-full h-30 bg-gradient-to-t from-transparent to-black z-21" />
+                {/* Dark Overlay */}
+                <div className="overlay h-full w-full opacity-10 bg-black absolute top-0 left-0"></div>
+                <div className="absolute top-0 left-0 w-full h-30 bg-gradient-to-t from-transparent to-black z-21" />
 
-  {/* Main Container */}
-  <div className="tourCategory-container flex flex-col justify-evenly items-center h-150 w-full gap-5 relative z-10">
-    <div className="boxes h-full w-[90%] p-5 mt-5 flex flex-col justify-around items-center">
-      <h1 className="text-5xl font-extrabold mb-2.5 text-white">Tour Category</h1>
+                {/* Main Container */}
+                <div className="tourCategory-container flex flex-col justify-evenly items-center h-150 w-full gap-5 relative z-10">
+                    <div className="boxes h-full w-[90%] p-5 mt-5 flex flex-col justify-around items-center">
+                        <h1 className="text-5xl font-extrabold mb-2.5 text-white">Tour Category</h1>
 
-      {/* CARD GRID */}
-      <div className="inner-box h-full w-full flex flex-wrap justify-center items-center gap-4 py-5">
-        {[
-          { name: "Honeymoon", img: "Honeymoon-Packages.jpg" },
-          { name: "Adventure", img: "Adventure-tour.jpg" },
-          { name: "Eco Tourism", img: "Eco-Tourism.jpg" },
-          { name: "Escorted", img: "Escorted.jpg" },
-          { name: "Group Tour", img: "Group-Tour-Packages.jpg" },
-          { name: "Leisure", img: "Leisure.jpg" },
-          { name: "Pilgrimage", img: "Pilgrimage-Kedarnath.jpg" },
-          { name: "Trekking", img: "Trekking-and-backpacking.jpg" }
-        ].map((card, idx) => (
-          <div
-            key={idx}
-            className="group/card relative h-52 w-72 overflow-hidden rounded-lg cursor-pointer transition-all duration-300 ease-in-out"
-          >
-            <img
-              className="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-105"
-              src={card.img}
-              alt={card.name}
-            />
-            <div className="absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/70 px-6 py-2 text-white font-semibold text-lg rounded">
-              {card.name}
+                        {/* CARD GRID */}
+                        <div className="inner-box h-full w-full flex flex-wrap justify-center items-center gap-4 py-5">
+                            {[
+                                { name: "Honeymoon", img: "Honeymoon-Packages.jpg" },
+                                { name: "Adventure", img: "Adventure-tour.jpg" },
+                                { name: "Eco Tourism", img: "Eco-Tourism.jpg" },
+                                { name: "Escorted", img: "Escorted.jpg" },
+                                { name: "Group Tour", img: "Group-Tour-Packages.jpg" },
+                                { name: "Leisure", img: "Leisure.jpg" },
+                                { name: "Pilgrimage", img: "Pilgrimage-Kedarnath.jpg" },
+                                { name: "Trekking", img: "Trekking-and-backpacking.jpg" }
+                            ].map((card, idx) => (
+                                <div
+                                    key={idx}
+                                    className="group/card relative h-52 w-72 overflow-hidden rounded-lg cursor-pointer transition-all duration-300 ease-in-out"
+                                >
+                                    <img
+                                        className="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-105"
+                                        src={card.img}
+                                        alt={card.name}
+                                    />
+                                    <div className="absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/70 px-6 py-2 text-white font-semibold text-lg rounded">
+                                        {card.name}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Bottom Gradient */}
+                <div className="absolute bottom-0 left-0 w-full h-30 bg-gradient-to-b from-transparent to-black z-20" />
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-
-  {/* Bottom Gradient */}
-  <div className="absolute bottom-0 left-0 w-full h-30 bg-gradient-to-b from-transparent to-black z-20" />
-</div>
 
             {/* domestic tours */}
             <div className="domestic-tour-wrapper bg-amber-50 h-190 w-screen overflow-hidden flex flex-col justify-center items-center  relative">
@@ -289,32 +289,32 @@ function Introduction() {
 
             {/* International tour */}
             <div className="international-tour-wrapper h-100 w-screen flex flex-col justify-center items-center">
-      <div className='w-screen flex justify-center items-center m-5'>
-        <h1 className='text-[#1A2B48] text-5xl font-semibold'>INTERNATIONAL</h1>
-      </div>
-      <div className="cards-container overflow-hidden h-full w-[90%] mt-5 relative">
-        <div
-          ref={cardsRef}
-          className="cards flex gap-6 h-full w-max py-2 px-10 flex-nowrap"
-        >
-          {[...cards, ...cards].map((place, idx) => (
-            <div
-              key={idx}
-              className={`group card relative h-60 w-60 rounded-full cursor-pointer overflow-hidden shadow-2xl shadow-black hover:${place.shadow} hover:scale-105 transform transition duration-400 ease-in-out`}
-            >
-              <img
-                className="h-full w-full object-cover transform transition duration-500 group-hover:scale-110"
-                src={place.img}
-                alt={place.name}
-              />
-              <div className="absolute top-[50%] left-[50%] w-full transform -translate-x-[50%] -translate-y-[50%] p-4 text-white text-center">
-                <h3 className="text-2xl font-bold">{place.name}</h3>
-              </div>
+                <div className='w-screen flex justify-center items-center m-5'>
+                    <h1 className='text-[#1A2B48] text-5xl font-semibold'>INTERNATIONAL</h1>
+                </div>
+                <div className="cards-container overflow-hidden h-full w-[90%] mt-5 relative">
+                    <div
+                        ref={cardsRef}
+                        className="cards flex gap-6 h-full w-max py-2 px-10 flex-nowrap"
+                    >
+                        {[...cards, ...cards].map((place, idx) => (
+                            <div
+                                key={idx}
+                                className={`group card relative h-60 w-60 rounded-full cursor-pointer overflow-hidden shadow-2xl shadow-black hover:${place.shadow} hover:scale-105 transform transition duration-400 ease-in-out`}
+                            >
+                                <img
+                                    className="h-full w-full object-cover transform transition duration-500 group-hover:scale-110"
+                                    src={place.img}
+                                    alt={place.name}
+                                />
+                                <div className="absolute top-[50%] left-[50%] w-full transform -translate-x-[50%] -translate-y-[50%] p-4 text-white text-center">
+                                    <h3 className="text-2xl font-bold">{place.name}</h3>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
 
 
 
