@@ -104,24 +104,6 @@ html body{
 
 
 
-/* hero section */
-
- /* .bg-img-container{
-    height: 100vh;
-    width: 100vw;
-} */
-
-
-.bg-img-container img{
-    position: absolute;
-    top: calc(55% - 250px);
-    left: calc(50%);
-    transform: translate(-50%,-50%);
-    object-fit: cover;
-}
-
-
-
 /* popular place cards */
 
 .popular-places{
@@ -145,6 +127,7 @@ html body{
   transition: all 0.3s ease;
   backdrop-filter: blur(30px);
   border-radius: 15px;
+  scroll-behavior: smooth;
 }
 
 /* Individual Card Styling */
@@ -176,3 +159,99 @@ html body{
   cursor: pointer;
 }
 
+
+
+/* Responsive for all devices */
+@media (max-width: 600px) {
+  .hero-container {
+    height: 90vh;
+    width: 100vw;
+    padding: 0;
+  }
+
+  .hero-container .bg-img {
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+
+  .text h1 {
+    font-size: 2rem !important; /* Adjust main heading */
+  }
+
+  .text h2 {
+    font-size: 1.2rem !important; /* Adjust subheading */
+  }
+
+  .text {
+    top: 40% !important;
+    padding: 0 1rem;
+  }
+  .mountain-8{
+    width: 65vw !important;
+    height: 75vh !important;
+    object-fit: cover;
+    left: 10%;
+  }
+  .mountain-1{
+    width: 60vw !important;
+    left: -32vw !important;
+    bottom: 0;
+  }
+  
+  .mountain-4{
+    width: 100vw !important;
+    height: 60vh !important;
+    left: -50vw !important;
+    bottom: 0%;
+    z-index: 5;
+  }
+   .mountain-2{
+    width: 60vw !important;
+    height: 60vh !important;
+    left: 50vw !important;
+    bottom: -10vh !important;
+    z-index: 6;
+  
+  }
+    .mountain-5{
+    width: 100vw !important;
+    height: 55vh !important;
+    left: 28vw !important;
+    bottom: -25vh !important;
+
+  
+  }
+     .mountain-10{
+    width: 100vw !important;
+    height: 60vh !important;
+    left: 50vw !important;
+    bottom: 0 !important;
+    z-index: 5;
+  
+  }
+  .fog-4{
+    width: 100vw !important;
+    height: 60vh !important;
+    left: 0 !important;
+    bottom: -30vw !important;
+    z-index: 11;
+  }
+    .fog-1{
+    width: 100vw !important;
+    height: 60vh !important;
+    left: 0 !important;
+    bottom: -20vw !important;
+    z-index: 21;
+  }
+
+  /* Hide or simplify certain elements if layout feels cluttered */
+  .sun_rays {
+    display: none;
+  }
+
+  .black_shadow {
+    height: 10vh;
+  }
+
+}

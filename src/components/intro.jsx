@@ -25,18 +25,17 @@ function Introduction() {
 
     useGSAP(() => {
         gsap.fromTo(".mountain-8", { y: 150 }, { y: 0, duration: 1.5 })
-        gsap.fromTo(".mountain-1", { y: 100 }, { y: 0, duration: 1.5, delay: 0.5 })
-        gsap.fromTo(".mountain-9", { y: 20 }, { y: 0, duration: 1.5, delay: 0.3 })
-        gsap.fromTo(".mountain-7", { y: 20 }, { y: 0, duration: 1.5, delay: 0.3 })
-        gsap.fromTo(".mountain-10", { y: 20 }, { y: 0, duration: 1.5, delay: 0.3 })
-        gsap.fromTo(".mountain-6", { y: 20 }, { y: 0, duration: 1.5, delay: 0.3 })
-        gsap.fromTo(".mountain-5", { y: 20 }, { y: 0, duration: 2, delay: 0.5 })
-        gsap.fromTo(".mountain-4", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
-        gsap.fromTo(".mountain-2", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
-        gsap.fromTo(".mountain-3", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
+        gsap.fromTo(".mountain-1", { y: 200 }, { y: 0, duration: 1.5, delay: 0.5 })
+        gsap.fromTo(".mountain-9", { y: 200 }, { y: 0, duration: 1.5, delay: 0.3 })
+        gsap.fromTo(".mountain-7", { y: 200 }, { y: 0, duration: 1.5, delay: 0.3 })
+        gsap.fromTo(".mountain-10", { y: 200 }, { y: 0, duration: 1.5, delay: 0.3 })
+        gsap.fromTo(".mountain-6", { y: 200 }, { y: 0, duration: 1.5, delay: 0.3 })
+        gsap.fromTo(".mountain-5", { y: 200 }, { y: 0, duration: 2, delay: 0.5 })
+        gsap.fromTo(".mountain-4", { y: 200 }, { y: 0, duration: 2, delay: 0.5 })
+        gsap.fromTo(".mountain-2", { y: 200 }, { y: 0, duration: 2, delay: 0.5 })
+        gsap.fromTo(".mountain-3", { y: 200 }, { y: 0, duration: 2, delay: 0.5 })
         gsap.fromTo(".fog-1", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
         gsap.fromTo(".fog-4", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
-        // gsap.fromTo(".fog-6", { y: 100 }, { y: 0, duration: 2, delay: 0.5 })
         gsap.fromTo('.navbar-container', { y: -50 }, { y: 0, duration: 1, delay: 0.5 })
         gsap.fromTo('.text h2', { y: -200, opacity: 0.08 }, { y: 0, opacity: 1, duration: 1.3, delay: 1, ease: "sine.in" })
         gsap.fromTo('.text h1', { y: 250, opacity: 0.08 }, { y: 0, opacity: 1, duration: 1.3, delay: 1, ease: "sine.in" })
@@ -80,21 +79,21 @@ function Introduction() {
             <div className="hero-container relative h-screen w-screen overflow-hidden rounded-b-2xl bg-black text-white">
 
                 {/* Background Image */}
-                <div className="bg-img-container h-200 w-full absolute inset-0 z-0">
-                    <img src="background.png" alt="Background" className="bg-img h-full w-full" />
+                <div className="bg-img-container  h-full w-full absolute inset-0 z-0">
+                    <img src="background1.png" alt="Background" className="bg-img h-full w-full object-cover" />
                 </div>
 
                 {/* Hero Elements Layer */}
-                <div className="absolute inset-0 z-10">
+                <div className="absolute h-full w-full inset-0 z-10">
                     {/* Fog and Mountains in order */}
                     <img src="fog_7.png" alt="" className="fog-7 absolute top-[80%] left-1/2 -translate-x-1/2 w-[10vw] z-[2]" />
-                    <img src="mountain_10.png" alt="" className="mountain-10 absolute top-[30%] left-[56%] w-[40vw] z-[3]" />
-                    <img src="fog_6.png" alt="" className="fog-6 absolute top-[50%] left-[45%] w-[55vw] z-[4]" />
-                    <img src="fog_6.png" alt="" className="fog-6 absolute top-[70%] left-[0%] w-[55vw] z-[4]" />
+                    <img src="mountain_10.png" alt="" className="mountain-10 absolute bottom-[0] left-[56%] w-[50vw] z-[3]" />
+                    <img src="fog_6.png" alt="" className="fog-6 absolute bottom-[10%] left-[45%] w-[55vw] z-[4]" />
+                    <img src="fog_6.png" alt="" className="fog-6 absolute bottom-[5%] left-[0%] w-[55vw] z-[4]" />
                     <img src="mountain_9.png" alt="" className="mountain-9 absolute bottom-[0%] left-[12%] w-[18vw] z-[5]" />
                     <img src="mountain_8.png" alt="" className="mountain-8 absolute bottom-[0%] left-[25%] w-[45vw] z-[6]" />
                     <img src="fog_5.png" alt="" className="fog-5 absolute -bottom-[20%] left-[40%] w-[20vw] z-[7]" />
-                    <img src="mountain_7.png" alt="" className="montain-7 absolute bottom-[0%] left-[55%] w-[25vw] z-[8]" />
+                    <img src="mountain_7.png" alt="" className="mountain-7 absolute bottom-[0%] left-[55%] w-[25vw] z-[8]" />
 
                     {/* Centered Text */}
                     <div className="text absolute w-full top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[9] text-center">
@@ -126,7 +125,7 @@ function Introduction() {
             {/* Popular places cards */}
             <div className='popular-places text-white  relative mt-5'>
                 {/* Section Title */}
-                <div className="title-container  w-full flex flex-col justify-center items-center">
+                <div className="title-container text-center  w-full flex flex-col justify-center items-center px-10">
                     <h1 className='text-3xl font-bold text-emerald-500'>POPULAR PLACES</h1>
                     <h6 className='text-sm  text-black font-light'>Discover handpicked destinations loved by travelers around the world.</h6>
                 </div>
@@ -155,7 +154,7 @@ function Introduction() {
             </div>
 
             {/* tour category section */}
-            <div className="TourCategory h-200 w-screen flex justify-center items-center relative overflow-hidden">
+            <div className="TourCategory min-h-screen w-screen flex justify-center items-center relative overflow-hidden">
                 {/* Background Image */}
                 <div className="tourCategory-bg h-full w-full absolute">
                     <img className="h-full w-full object-cover" src="River.jpeg" alt="" />
@@ -166,12 +165,12 @@ function Introduction() {
                 <div className="absolute top-0 left-0 w-full h-30 bg-gradient-to-t from-transparent to-black z-21" />
 
                 {/* Main Container */}
-                <div className="tourCategory-container flex flex-col justify-evenly items-center h-150 w-full gap-5 relative z-10">
-                    <div className="boxes h-full w-[90%] p-5 mt-5 flex flex-col justify-around items-center">
-                        <h1 className="text-5xl font-extrabold mb-2.5 text-white">Tour Category</h1>
+                <div className="tourCategory-container  flex flex-col justify-evenly items-center h-150 w-full gap-5 relative z-10">
+                    <div className="boxes h-full w-[90%]  p-5 mt-5 flex flex-col justify-around items-center">
+                        <h1 className="text-5xl font-extrabold mb-2.5 text-white text-center">Tour Category</h1>
 
                         {/* CARD GRID */}
-                        <div className="inner-box h-full w-full flex flex-wrap justify-center items-center gap-4 py-5">
+                        <div className="inner-box  h-full w-full  flex flex-wrap justify-center items-center gap-4 py-5 ">
                             {[
                                 { name: "Honeymoon", img: "Honeymoon-Packages.jpg" },
                                 { name: "Adventure", img: "Adventure-tour.jpg" },
@@ -289,10 +288,10 @@ function Introduction() {
 
             {/* International tour */}
             <div className="international-tour-wrapper h-100 w-screen flex flex-col justify-center items-center">
-                <div className='w-screen flex justify-center items-center m-5'>
+                <div className='w-screen flex justify-center items-center m-5 '>
                     <h1 className='text-[#1A2B48] text-5xl font-semibold'>INTERNATIONAL</h1>
                 </div>
-                <div className="cards-container overflow-hidden h-full w-[90%] mt-5 relative">
+                <div className="cards-container overflow-hidden h-full w-full mt-5 relative">
                     <div
                         ref={cardsRef}
                         className="cards flex gap-6 h-full w-max py-2 px-10 flex-nowrap"
