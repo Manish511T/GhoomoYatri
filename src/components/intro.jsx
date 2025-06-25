@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import Navbar from './navbar';
+import Footer from './footer';
 import { Timeline } from 'gsap/gsap-core';
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -314,6 +315,7 @@ function Introduction() {
                     </div>
                 </div>
             </div>
+            <Footer/>
 
 
 
