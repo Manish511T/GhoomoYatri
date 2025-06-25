@@ -11,6 +11,7 @@ html body{
 }
 
 
+
 /* loading */
 .wrapper {
   width: 200px;
@@ -101,8 +102,21 @@ html body{
   animation-delay: .3s;
 }
 
+/* navbar */
+.slideMenu{
+  transition: all 0.3s ease;
+  backdrop-filter: blur(30px);
+  border-radius: 15px;
+  scroll-behavior: smooth;
+  background: rgba(0, 0, 0, 0.2);
+  
+}
 
+.navbar-container{
+  background: rgba(255, 255, 255, 0.8);
+  transition: top 0.4s ease;
 
+}
 
 /* popular place cards */
 
