@@ -159,6 +159,30 @@ html body{
   cursor: pointer;
 }
 
+/* footer */
+#logo {
+  width: 100px;
+  height: 100px;
+  fill: transparent;
+  filter: drop-shadow(0 0 5px #0086FF) drop-shadow(0 0 10px #0086FF);
+}
+
+#logo path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  fill: none;
+}
+
+
+a{
+  color: #5E758D;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
 
 
 /* Responsive for all devices */
