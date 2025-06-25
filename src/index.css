@@ -199,7 +199,7 @@ a:hover{
 
 
 /* Responsive for all devices */
-@media (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .hero-container {
     height: 90vh;
     width: 100vw;
@@ -281,8 +281,6 @@ a:hover{
     bottom: -20vw !important;
     z-index: 21;
   }
-
-  /* Hide or simplify certain elements if layout feels cluttered */
   .sun_rays {
     display: none;
   }
@@ -292,3 +290,106 @@ a:hover{
   }
 
 }
+
+/* popular places */
+
+@media (max-width: 640px) {
+  .popular-places {
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .card {
+    min-width: 180px !important;
+    height: 260px !important;
+  }
+
+  .title-container h1 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .title-container h6 {
+    font-size: 0.7rem;  /* 11.2px */
+  }
+
+  .cards-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Domestic tour */
+
+@media (max-width: 768px) {
+  .domestic-card-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+    padding: 0 0 12rem;
+  }
+
+  .domestic-card-container .card {
+    width: 80% !important;
+    height: 180px !important;
+    
+  }
+
+  .card h1 {
+    font-size: 1.2rem;
+  }
+
+  .card h7 {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* International */
+/* For tablet and below */
+@media (max-width: 768px) {
+  .international-tour-wrapper {
+    /* padding: 1rem; */
+    height: auto;
+  }
+
+  .international-tour-wrapper .cards-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 1rem;
+    height: 250px; 
+  }
+
+  .international-tour-wrapper .cards {
+    flex-wrap: nowrap;
+    width: max-content;
+    gap: 1rem;
+  }
+
+  .international-tour-wrapper .cards .card {
+    width: 180px !important;
+    height: 200px !important;
+    border-radius: 9999px; /* Fully rounded */
+    flex-shrink: 0;
+  }
+
+  .international-tour-wrapper .cards .card h3 {
+    font-size: 1rem;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .international-tour-wrapper .cards .card {
+    width: 150px !important;
+    height: 180px !important;
+  }
+
+  .international-tour-wrapper .cards .card h3 {
+    font-size: 0.9rem;
+  }
+}
+

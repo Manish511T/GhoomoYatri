@@ -124,16 +124,18 @@ function Introduction() {
             <Navbar />
 
             {/* Popular places cards */}
-            <div className='popular-places text-white  relative mt-5'>
+            <div className="popular-places text-white relative mt-5 w-full">
                 {/* Section Title */}
-                <div className="title-container text-center  w-full flex flex-col justify-center items-center px-10">
-                    <h1 className='text-3xl font-bold text-emerald-500'>POPULAR PLACES</h1>
-                    <h6 className='text-sm  text-black font-light'>Discover handpicked destinations loved by travelers around the world.</h6>
+                <div className="title-container text-center w-full flex flex-col justify-center items-center px-4 sm:px-10">
+                    <h1 className="text-xl sm:text-3xl font-bold text-emerald-500">POPULAR PLACES</h1>
+                    <h6 className="text-xs sm:text-sm text-black font-light mt-1 sm:mt-2">
+                        Discover handpicked destinations loved by travelers around the world.
+                    </h6>
                 </div>
 
                 {/* Scrollable Cards */}
-                <div className="cards-container overflow-x-auto  h-full w-full mt-5">
-                    <div className="cards flex gap-6 w-max px-10 flex-nowrap">
+                <div className="cards-container overflow-x-auto h-full w-full mt-4 sm:mt-6 scroll-smooth scroll-px-4 snap-x snap-mandatory">
+                    <div className="cards flex gap-4 sm:gap-6 w-max px-4 sm:px-10">
                         {[
                             { name: "Shimla", tag: "Queen of Hills", img: "shimla.jpeg", shadow: "shadow-cyan-800" },
                             { name: "Coorg", tag: "Scotland of India", img: "Coorg.jpeg", shadow: "shadow-lime-800" },
@@ -142,17 +144,26 @@ function Introduction() {
                             { name: "Ooty", tag: "Queen of Hill stations", img: "Ooty.jpeg", shadow: "shadow-lime-800" },
                             { name: "Manali", tag: "Valley of Gods", img: "Manali.jpeg", shadow: "shadow-cyan-800" }
                         ].map((place, idx) => (
-                            <div key={idx} className={`group card relative min-w-[250px] h-[300px] cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:${place.shadow} hover:scale-105 transform transition duration-300 ease-in-out`}>
-                                <img className='h-full w-full object-cover transform transition duration-500 group-hover:scale-110' src={place.img} alt={place.name} />
-                                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
-                                    <h3 className="text-xl font-bold">{place.name}</h3>
-                                    <p className="text-sm">{place.tag}</p>
+                            <div
+                                key={idx}
+                                className={`group card relative min-w-[180px] sm:min-w-[250px] h-[260px] sm:h-[300px] snap-start cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:${place.shadow} hover:scale-105 transform transition duration-300 ease-in-out`}
+                            >
+                                <img
+                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src={place.img}
+                                    alt={place.name}
+                                />
+                                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-3 sm:p-4 text-white">
+                                    <h3 className="text-base sm:text-lg font-bold">{place.name}</h3>
+                                    <p className="text-xs sm:text-sm">{place.tag}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
+
+
 
             {/* tour category section */}
             <div className="TourCategory min-h-screen w-screen flex justify-center items-center relative overflow-hidden">
@@ -315,7 +326,7 @@ function Introduction() {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
 
 
 
