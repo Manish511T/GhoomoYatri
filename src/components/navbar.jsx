@@ -33,28 +33,31 @@ function Navbar() {
   };
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-    let timeoutId;
+   let lastScrollY = window.scrollY;
+  let timeoutId;
 
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const isDesktop = window.innerWidth >= 768;
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    const isDesktop = window.innerWidth >= 768;
 
-      if (isDesktop) {
-        if (currentScrollY > lastScrollY && currentScrollY > 50) {
-          setIsNavbarVisible(false); // Scroll down → hide
-        } else {
-          setIsNavbarVisible(true); // Scroll up → show
-        }
+    if (!isDesktop) return;
 
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          setIsNavbarVisible(true); // After stop scrolling → show again
-        }, 300); // You can increase for longer delay
-      }
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      // Scrolling down
+      setIsNavbarVisible(false);
+    } else if (currentScrollY < lastScrollY) {
+      // Scrolling up
+      setIsNavbarVisible(true);
+    }
 
-      lastScrollY = currentScrollY;
-    };
+    // If user stops scrolling, show navbar after delay
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      setIsNavbarVisible(true);
+    }, 800); // Slightly longer for smoother experience
+
+    lastScrollY = currentScrollY;
+  };
 
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -65,8 +68,9 @@ function Navbar() {
 
   return (
     <div
-      className={`navbar-container ${isNavbarVisible ? 'fixed' : 'relative'
-        } top-0 left-0 w-full z-50 transition-all duration-500 rounded-lg text-black`}
+      className={`navbar-container fixed top-0 left-0 w-full z-50 transition-all duration-700 ease-in-out text-black ${
+    isNavbarVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+  }`}
     >
       {/* --- Mobile View --- */}
       <div className="flex justify-between items-center px-4 py-3 h-16 relative md:hidden">

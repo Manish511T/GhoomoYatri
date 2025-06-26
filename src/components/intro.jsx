@@ -77,6 +77,7 @@ function Introduction() {
 
     return (
         <>
+            <Navbar />
             <div className="hero-container relative h-screen w-screen overflow-hidden rounded-b-2xl bg-black text-white">
 
                 {/* Background Image */}
@@ -121,7 +122,6 @@ function Introduction() {
                 <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-emerald-900 blur-3xl z-[23]" />
 
             </div>
-            <Navbar />
 
             {/* Popular places cards */}
             <div className="popular-places text-white relative mt-5 w-full">
