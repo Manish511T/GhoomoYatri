@@ -3,33 +3,28 @@ import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Intro from './components/intro'
-import Loading from './components/loading';
+import Domestic from './pages/domestic';
+import International from './pages/international';
+import Home from './pages/home';
+import Contact from './pages/contact';
+import About from './pages/about';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 function App() {
-    const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (document.readyState === 'complete') {
-      // If already loaded
-      setLoading(false);
-    } else {
-      // Otherwise wait for load
-      const handleLoad = () => {
-        setLoading(false);
-      };
-      window.addEventListener('load', handleLoad);
-
-      // Cleanup in case component unmounts early
-      return () => window.removeEventListener('load', handleLoad);
-    }
-  }, []);
   return (
     <>
-
-    {loading?<Loading/>:<Intro/> }
-      {/* <Loading />
-      <Intro /> */}
+      
+      <Router>
+        <Routes>
+          <Route path="/" element={<Intro />} />
+          <Route path="/domestic" element={<Domestic />} />
+          <Route path="/international" element={<International />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
     </>
   )
 }
