@@ -6,6 +6,7 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import Navbar from './navbar';
 import Footer from './footer';
 import CallToAction from './callToAction';
+
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
 
@@ -20,7 +21,6 @@ const cards = [
 ];
 
 function Introduction() {
-
 
     const cardsRef = useRef(null);
 
@@ -145,6 +145,7 @@ function Introduction() {
                             { name: "Manali", tag: "Valley of Gods", img: "Manali.jpeg", shadow: "shadow-cyan-800" }
                         ].map((place, idx) => (
                             <div
+                                
                                 key={idx}
                                 className={`group card relative min-w-[180px] sm:min-w-[250px] h-[260px] sm:h-[300px] snap-start cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:${place.shadow} hover:scale-105 transform transition duration-300 ease-in-out`}
                             >
@@ -152,6 +153,7 @@ function Introduction() {
                                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                                     src={place.img}
                                     alt={place.name}
+                                    
                                 />
                                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-3 sm:p-4 text-white">
                                     <h3 className="text-base sm:text-lg font-bold">{place.name}</h3>
