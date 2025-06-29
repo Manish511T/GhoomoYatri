@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import CallToAction from '../components/callToAction';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Define regions
 const regions = ["All", "North India", "South India", "East India", "West India", "North-East India"];
@@ -173,7 +175,42 @@ const destinations = [
 
 ];
 
+// Define reasons for choosing domestic tours
+const reasons = [
+  {
+    icon: "✔️",
+    title: "Budget-Friendly",
+    desc: "Affordable packages without compromising quality.",
+  },
+  {
+    icon: "✔️",
+    title: "Handpicked Hotels",
+    desc: "Comfortable stays at top-rated properties.",
+  },
+  {
+    icon: "✔️",
+    title: "24x7 Support",
+    desc: "Always there to assist you throughout your trip.",
+  },
+  {
+    icon: "✔️",
+    title: "Local Guides",
+    desc: "Explore with experienced local tour experts.",
+  },
+  {
+    icon: "✔️",
+    title: "Custom Itineraries",
+    desc: "Personalized plans that suit your preferences.",
+  },
+];
+
 const Domestic = () => {
+  // Initialize AOS for animations
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+  }, []);
+
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedRegion, setSelectedRegion] = useState("All");
 
@@ -213,9 +250,11 @@ const Domestic = () => {
               <h2 className="text-sm uppercase">Discover</h2>
               <h1 className="text-7xl font-bold">{visibleCards[0].title}</h1>
               <p className="mt-4 text-lg text-wrap">{visibleCards[0].description}</p>
-              <button className="w-fit mt-10 bg-white text-black px-6 py-2 rounded-full flex items-center gap-2 cursor-pointer hover:bg-emerald-600 hover:border-2 hover:border-emerald-200 hover:text-white">
-                Explore →
+              <button className="group w-fit mt-10 bg-white text-black px-6 py-2 rounded-full flex items-center gap-2 cursor-pointer transition-all duration-300 hover:bg-emerald-600 hover:text-white hover:shadow-lg">
+                Explore
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
               </button>
+
             </div>
 
             <div className="absolute h-fit w-fit left-[63%] top-[50%] flex gap-[-30px] pr-4">
@@ -261,16 +300,23 @@ const Domestic = () => {
 
       {/* === REGION FILTERED CARDS GRID === */}
       <div className="mt-20 px-20">
+        <div className="mt-24 text-center px-6">
+          <h2 className="text-4xl font-bold text-[#009966] mb-2 ">Explore Domestic Tours</h2>
+          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+            Discover the hidden gems and iconic landscapes across every corner of India — from the serene Himalayas to the golden beaches.
+          </p>
+        </div>
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           {regions.map((region) => (
             <button
+              data-aos="zoom-in"
               key={region}
               onClick={() => setSelectedRegion(region)}
-              className={`px-4 py-2 text-sm font-semibold rounded-full border ${selectedRegion === region
-                ? "bg-emerald-600 text-white border-emerald-600"
-                : "bg-white text-gray-700 border-gray-300 hover:bg-emerald-50"
-                }`}
+              className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 border shadow-sm
+    ${selectedRegion === region
+                  ? "bg-emerald-600 text-white border-emerald-600 shadow-md"
+                  : "bg-white text-gray-700 border-gray-300 hover:bg-emerald-50 hover:shadow-md"}`}
             >
               {region}
             </button>
@@ -281,19 +327,28 @@ const Domestic = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {filteredDestinations.map((item) => (
             <div
+              data-aos="fade-up"
               key={item.id}
-              className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 bg-white"
+              className="rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1"
             >
-              <img src={item.image} alt={item.title} className="w-full h-52 object-cover" />
+              <img
+                loading="lazy"
+                src={item.image}
+                alt={item.title}
+                className="w-full h-52 object-cover"
+              />
               <div className="p-4">
                 <p className="text-sm text-gray-500">{item.subtitle}</p>
-                <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
                 <p className="mt-2 text-gray-600 text-sm">{item.description}</p>
                 <div className="mt-3 text-yellow-400 text-lg">
-                  {"★".repeat(item.rating)}{"☆".repeat(5 - item.rating)}
+                  {Array.from({ length: 5 }, (_, i) => (
+                    <span key={i}>{i < Math.round(item.rating) ? "★" : "☆"}</span>
+                  ))}
                 </div>
               </div>
             </div>
+
           ))}
         </div>
       </div>
@@ -302,46 +357,23 @@ const Domestic = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Why Choose Our Domestic Tours</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto text-center">
-          {/* 1 */}
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
-            <div className="text-emerald-600 text-4xl mb-3">✔️</div>
-            <h3 className="text-lg font-semibold text-gray-800">Budget-Friendly</h3>
-            <p className="text-sm text-gray-500 mt-1">Affordable packages without compromising quality.</p>
-          </div>
-
-          {/* 2 */}
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
-            <div className="text-emerald-600 text-4xl mb-3">✔️</div>
-            <h3 className="text-lg font-semibold text-gray-800">Handpicked Hotels</h3>
-            <p className="text-sm text-gray-500 mt-1">Comfortable stays at top-rated properties.</p>
-          </div>
-
-          {/* 3 */}
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
-            <div className="text-emerald-600 text-4xl mb-3">✔️</div>
-            <h3 className="text-lg font-semibold text-gray-800">24x7 Support</h3>
-            <p className="text-sm text-gray-500 mt-1">Always there to assist you throughout your trip.</p>
-          </div>
-
-          {/* 4 */}
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
-            <div className="text-emerald-600 text-4xl mb-3">✔️</div>
-            <h3 className="text-lg font-semibold text-gray-800">Local Guides</h3>
-            <p className="text-sm text-gray-500 mt-1">Explore with experienced local tour experts.</p>
-          </div>
-
-          {/* 5 */}
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
-            <div className="text-emerald-600 text-4xl mb-3">✔️</div>
-            <h3 className="text-lg font-semibold text-gray-800">Custom Itineraries</h3>
-            <p className="text-sm text-gray-500 mt-1">Personalized plans that suit your preferences.</p>
-          </div>
+          {reasons.map((item, index) => (
+            <div
+              key={index}
+              className={`p-6 rounded-xl shadow-md transition duration-300 hover:shadow-xl ${index % 2 === 0 ? 'bg-emerald-100' : 'bg-yellow-100'}`}
+            >
+              <div className="text-emerald-600 text-4xl mb-3">{item.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
+              <p className="text-sm text-gray-800 mt-1">{item.desc}</p>
+            </div>
+          ))}
         </div>
+
       </div>
       {/* call to action*/}
       <CallToAction />
       {/* === FOOTER (unchanged) === */}
-      <Footer/>
+      <Footer />
 
     </>
   );

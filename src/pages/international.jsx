@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import CallToAction from '../components/callToAction';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
-// Define continents or regions
 const regions = ["All", "Europe", "Asia", "Africa", "North America", "South America", "Australia"];
 
-// International destination data
 const destinations = [
   {
     id: 1,
@@ -75,6 +75,10 @@ const International = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+  }, []);
+
   const visibleCards = [
     destinations[currentIndex % destinations.length],
     destinations[(currentIndex + 1) % destinations.length],
@@ -86,29 +90,40 @@ const International = () => {
       ? destinations
       : destinations.filter((dest) => dest.region === selectedRegion);
 
+  const renderStars = (rating) => {
+    const full = Math.floor(rating);
+    return (
+      <>
+        {"★".repeat(full)}
+        {"☆".repeat(5 - full)}
+      </>
+    );
+  };
+
   return (
     <>
       <Navbar />
 
       {/* === HERO SECTION === */}
-      <div className="w-screen px-10 flex items-center justify-center rounded-4xl">
+      <div className="w-screen px-6 flex items-center justify-center rounded-4xl">
         <div
-          className="w-full h-[90vh] mt-16 px-10 rounded-4xl shadow-2xl shadow-black bg-cover relative transition-all duration-700 ease-in-out overflow-hidden"
+          className="w-full h-[90vh] mt-16 px-6 md:px-10 rounded-4xl shadow-2xl shadow-black bg-cover relative transition-all duration-700 ease-in-out overflow-hidden"
           style={{ backgroundImage: `url(${visibleCards[0].image})` }}
         >
-          <div className="absolute inset-0 bg-black/60 z-0"></div>
+          <div className="absolute inset-0 bg-black/40 z-0" />
 
-          <div className="relative z-10 h-full w-full flex items-center justify-between px-12">
-            <div className="text-white flex flex-col justify-center w-1/2">
-              <h2 className="text-sm uppercase">Explore World</h2>
-              <h1 className="text-7xl font-bold">{visibleCards[0].title}</h1>
-              <p className="mt-4 text-lg text-wrap">{visibleCards[0].description}</p>
-              <button className="w-fit mt-10 bg-white text-black px-6 py-2 rounded-full flex items-center gap-2 cursor-pointer hover:bg-blue-600 hover:border-2 hover:border-blue-200 hover:text-white">
-                Book Now →
+          <div className="relative z-10 h-full w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12">
+            <div className="text-white flex flex-col justify-center w-full md:w-1/2">
+              <h2 className="text-sm uppercase tracking-widest">Explore World</h2>
+              <h1 className="text-5xl md:text-7xl font-bold drop-shadow-lg">{visibleCards[0].title}</h1>
+              <p className="mt-4 text-lg text-white/90 max-w-md">{visibleCards[0].description}</p>
+              <button className="group w-fit mt-8 bg-white text-blue-600 px-6 py-2 rounded-full flex items-center gap-2 cursor-pointer hover:bg-blue-700 hover:text-white hover:shadow-lg transition-all duration-300">
+                Book Now <span className="group-hover:translate-x-1 transition-transform">→</span>
               </button>
             </div>
 
-            <div className="absolute h-fit w-fit left-[63%] top-[50%] flex gap-[-30px] pr-4">
+            {/* Thumbnail Slider */}
+            <div className="absolute left-[60%] top-[50%] hidden md:flex gap-[-30px] pr-4">
               {visibleCards.map((item, idx) => {
                 let scale = "scale-80";
                 let zIndex = 10;
@@ -130,16 +145,19 @@ const International = () => {
                   <div
                     key={item.id}
                     onClick={() => setCurrentIndex((currentIndex + idx) % destinations.length)}
-                    className={`relative w-[12vw] h-70 rounded-xl overflow-hidden shadow-lg transition-all duration-500 cursor-pointer transform ${scale} ${opacity} ${shadow}`}
+                    className={`relative w-[12vw] h-70 rounded-xl overflow-hidden bg-white transition-all duration-500 cursor-pointer transform ${scale} ${opacity} ${shadow}`}
                     style={{ zIndex }}
                   >
-                    <img src={item.image} alt={item.title} className="h-full w-full object-cover" />
+                    <img
+                      src={item.image}
+                      alt={`${item.title} thumbnail`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
                     <div className="absolute bottom-2 left-2 text-white drop-shadow">
                       <p className="text-sm">{item.subtitle}</p>
                       <h3 className="text-lg font-semibold">{item.title}</h3>
-                      <div className="flex text-yellow-300">
-                        {"★".repeat(item.rating)}{"☆".repeat(5 - item.rating)}
-                      </div>
+                      <div className="text-yellow-300">{renderStars(item.rating)}</div>
                     </div>
                   </div>
                 );
@@ -150,73 +168,75 @@ const International = () => {
       </div>
 
       {/* === FILTERED DESTINATION CARDS === */}
-      <div className="mt-20 px-20">
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+      <section className="mt-20 px-4 md:px-20 bg-gray-50 py-16">
+        <h2 className="text-4xl font-bold text-center text-blue-900 mb-2">Explore International Tours</h2>
+        <p className="text-center text-gray-600 mb-10">Handpicked destinations across the globe curated just for you.</p>
+
+        {/* Region Filters */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
           {regions.map((region) => (
             <button
               key={region}
               onClick={() => setSelectedRegion(region)}
-              className={`px-4 py-2 text-sm font-semibold rounded-full border ${selectedRegion === region
-                ? "bg-blue-600 text-white border-blue-600"
-                : "bg-white text-gray-700 border-gray-300 hover:bg-blue-50"
-                }`}
+              className={`px-4 py-2 text-sm font-semibold rounded-full border transition-all duration-300 ${
+                selectedRegion === region
+                  ? "bg-blue-600 text-white border-blue-600 shadow-md"
+                  : "bg-white text-gray-700 border-gray-300 hover:bg-blue-50"
+              }`}
             >
               {region}
             </button>
           ))}
         </div>
 
+        {/* Destination Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {filteredDestinations.map((item) => (
             <div
               key={item.id}
-              className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 bg-white"
+              className="rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-transform duration-300 hover:scale-105"
+              data-aos="fade-up"
             >
-              <img src={item.image} alt={item.title} className="w-full h-52 object-cover" />
+              <img
+                src={item.image}
+                alt={`${item.title} - ${item.subtitle}`}
+                className="w-full h-52 object-cover"
+                loading="lazy"
+              />
               <div className="p-4">
                 <p className="text-sm text-gray-500">{item.subtitle}</p>
                 <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
                 <p className="mt-2 text-gray-600 text-sm">{item.description}</p>
-                <div className="mt-3 text-yellow-400 text-lg">
-                  {"★".repeat(item.rating)}{"☆".repeat(5 - item.rating)}
-                </div>
+                <div className="mt-3 text-yellow-400 text-lg">{renderStars(item.rating)}</div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* === WHY CHOOSE US === */}
-      <div className="mt-20 px-10 pb-20">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Why Choose Our International Tours</h2>
+      <section className="mt-20 px-4 md:px-10 pb-20">
+        <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Why Choose Our International Tours</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto text-center">
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
-            <div className="text-blue-600 text-4xl mb-3">🌐</div>
-            <h3 className="text-lg font-semibold text-gray-800">Global Reach</h3>
-            <p className="text-sm text-gray-500 mt-1">Explore destinations across 6 continents.</p>
-          </div>
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
-            <div className="text-blue-600 text-4xl mb-3">✈️</div>
-            <h3 className="text-lg font-semibold text-gray-800">Best Airlines</h3>
-            <p className="text-sm text-gray-500 mt-1">We partner with top global airlines.</p>
-          </div>
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
-            <div className="text-blue-600 text-4xl mb-3">🏨</div>
-            <h3 className="text-lg font-semibold text-gray-800">Premium Hotels</h3>
-            <p className="text-sm text-gray-500 mt-1">Stays in the finest international properties.</p>
-          </div>
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
-            <div className="text-blue-600 text-4xl mb-3">📞</div>
-            <h3 className="text-lg font-semibold text-gray-800">24/7 Global Support</h3>
-            <p className="text-sm text-gray-500 mt-1">Help whenever, wherever you are.</p>
-          </div>
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
-            <div className="text-blue-600 text-4xl mb-3">🗺️</div>
-            <h3 className="text-lg font-semibold text-gray-800">Customized Itineraries</h3>
-            <p className="text-sm text-gray-500 mt-1">Your trip, your way.</p>
-          </div>
+          {[
+            { icon: "🌐", title: "Global Reach", desc: "Explore destinations across 6 continents." },
+            { icon: "✈️", title: "Best Airlines", desc: "We partner with top global airlines." },
+            { icon: "🏨", title: "Premium Hotels", desc: "Stays in the finest international properties." },
+            { icon: "📞", title: "24/7 Global Support", desc: "Help whenever, wherever you are." },
+            { icon: "🗺️", title: "Customized Itineraries", desc: "Your trip, your way." }
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-gradient-to-br from-emerald-50 to-emerald-200 shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300"
+              data-aos="zoom-in"
+            >
+              <div className="text-blue-600 text-4xl mb-3">{item.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
+              <p className="text-sm text-gray-500 mt-1">{item.desc}</p>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
 
       <CallToAction />
       <Footer />
