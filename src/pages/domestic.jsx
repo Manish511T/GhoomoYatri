@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import CallToAction from '../components/callToAction';
 
 // Define regions
 const regions = ["All", "North India", "South India", "East India", "West India", "North-East India"];
@@ -168,7 +170,7 @@ const destinations = [
     description: "A picturesque valley known for the Ziro Music Festival and lush paddy fields.",
     rating: 4.9
   }
-  
+
 ];
 
 const Domestic = () => {
@@ -265,11 +267,10 @@ const Domestic = () => {
             <button
               key={region}
               onClick={() => setSelectedRegion(region)}
-              className={`px-4 py-2 text-sm font-semibold rounded-full border ${
-                selectedRegion === region
-                  ? "bg-emerald-600 text-white border-emerald-600"
-                  : "bg-white text-gray-700 border-gray-300 hover:bg-emerald-50"
-              }`}
+              className={`px-4 py-2 text-sm font-semibold rounded-full border ${selectedRegion === region
+                ? "bg-emerald-600 text-white border-emerald-600"
+                : "bg-white text-gray-700 border-gray-300 hover:bg-emerald-50"
+                }`}
             >
               {region}
             </button>
@@ -296,6 +297,52 @@ const Domestic = () => {
           ))}
         </div>
       </div>
+      {/* === WHY CHOOSE US SECTION === */}
+      <div className="mt-20 px-10 pb-20">
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Why Choose Our Domestic Tours</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto text-center">
+          {/* 1 */}
+          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
+            <div className="text-emerald-600 text-4xl mb-3">✔️</div>
+            <h3 className="text-lg font-semibold text-gray-800">Budget-Friendly</h3>
+            <p className="text-sm text-gray-500 mt-1">Affordable packages without compromising quality.</p>
+          </div>
+
+          {/* 2 */}
+          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
+            <div className="text-emerald-600 text-4xl mb-3">✔️</div>
+            <h3 className="text-lg font-semibold text-gray-800">Handpicked Hotels</h3>
+            <p className="text-sm text-gray-500 mt-1">Comfortable stays at top-rated properties.</p>
+          </div>
+
+          {/* 3 */}
+          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
+            <div className="text-emerald-600 text-4xl mb-3">✔️</div>
+            <h3 className="text-lg font-semibold text-gray-800">24x7 Support</h3>
+            <p className="text-sm text-gray-500 mt-1">Always there to assist you throughout your trip.</p>
+          </div>
+
+          {/* 4 */}
+          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
+            <div className="text-emerald-600 text-4xl mb-3">✔️</div>
+            <h3 className="text-lg font-semibold text-gray-800">Local Guides</h3>
+            <p className="text-sm text-gray-500 mt-1">Explore with experienced local tour experts.</p>
+          </div>
+
+          {/* 5 */}
+          <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition duration-300">
+            <div className="text-emerald-600 text-4xl mb-3">✔️</div>
+            <h3 className="text-lg font-semibold text-gray-800">Custom Itineraries</h3>
+            <p className="text-sm text-gray-500 mt-1">Personalized plans that suit your preferences.</p>
+          </div>
+        </div>
+      </div>
+      {/* call to action*/}
+      <CallToAction />
+      {/* === FOOTER (unchanged) === */}
+      <Footer/>
+
     </>
   );
 };
