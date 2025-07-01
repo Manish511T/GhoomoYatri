@@ -85,10 +85,7 @@ const International = () => {
     destinations[(currentIndex + 2) % destinations.length]
   ];
 
-  const filteredDestinations =
-    selectedRegion === "All"
-      ? destinations
-      : destinations.filter((dest) => dest.region === selectedRegion);
+  const filteredDestinations = selectedRegion === "All" ? destinations : destinations.filter((dest) => dest.region === selectedRegion);
 
   const renderStars = (rating) => {
     const full = Math.floor(rating);

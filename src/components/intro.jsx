@@ -99,8 +99,8 @@ function Introduction() {
 
                     {/* Centered Text */}
                     <div className="text absolute w-full top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[9] text-center">
-                        <h2 className=" text-4xl font-light uppercase">Journey</h2>
-                        <h1 className=" text-7xl font-bold uppercase mt-2">Begins with GhoomoYatri</h1>
+                        <h2 className=" text-4xl font-semibold uppercase">Journey</h2>
+                        <h1 className=" text-7xl font-extrabold uppercase mt-2">Begins with GhoomoYatri</h1>
                     </div>
 
                     <img src="mountain_6.png" alt="" className="mountain-6 absolute bottom-[0%] left-[70%] w-[15vw] z-[10]" />

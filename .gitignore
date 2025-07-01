@@ -25,3 +25,7 @@ dist-ssr
 
 #Ignore backend folder
 backend/
+
+# sensitive files
+.env
+node_modules/
