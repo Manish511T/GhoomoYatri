@@ -173,6 +173,26 @@ html body{
   cursor: pointer;
 }
 
+/* brand label */
+@keyframes loop-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-loop-scroll {
+  animation: loop-scroll 30s linear infinite;
+}
+
+.slider-track {
+  width: 200%; /* because we duplicated the items */
+}
+
+
+
 /* footer */
 #logo {
 

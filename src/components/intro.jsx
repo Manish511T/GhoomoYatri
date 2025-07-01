@@ -6,6 +6,7 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import Navbar from './navbar';
 import Footer from './footer';
 import CallToAction from './callToAction';
+import BrandLabel from './brandLabel';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -328,6 +329,7 @@ function Introduction() {
                     </div>
                 </div>
             </div>
+            <BrandLabel/>
             <CallToAction />
             <Footer />
 

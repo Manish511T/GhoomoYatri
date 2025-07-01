@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import CallToAction from '../components/callToAction';
+import BrandLabel from '../components/brandLabel';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -370,6 +371,8 @@ const Domestic = () => {
         </div>
 
       </div>
+      {/* === BRAND LABEL SECTION === */}
+      <BrandLabel/>
       {/* call to action*/}
       <CallToAction />
       {/* === FOOTER (unchanged) === */}

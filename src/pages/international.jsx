@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import CallToAction from '../components/callToAction';
+import BrandLabel from '../components/brandLabel';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
@@ -234,7 +235,7 @@ const International = () => {
           ))}
         </div>
       </section>
-
+      <BrandLabel/>
       <CallToAction />
       <Footer />
     </>

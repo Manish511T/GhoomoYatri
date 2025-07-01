@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import CallToAction from '../components/callToAction';
+import BrandLabel from '../components/brandLabel';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -131,7 +133,8 @@ const ContactUs = () => {
           <p className="text-gray-600">Email: Info@ghoomoyatri.com</p>
         </div>
       </div>
-
+      <BrandLabel/>
+      <CallToAction />
       <Footer />
     </>
   );

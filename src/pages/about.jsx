@@ -4,6 +4,7 @@ import Footer from '../components/footer';
 import CallToAction from '../components/callToAction';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import BrandLabel from '../components/brandLabel';
 
 const AboutUs = () => {
   useEffect(() => {
@@ -92,6 +93,7 @@ const AboutUs = () => {
           ))}
         </div>
       </section>
+      <BrandLabel/>
 
       <CallToAction />
       <Footer />
