@@ -17,7 +17,7 @@ const AboutUs = () => {
 
       {/* HERO SECTION */}
       <section
-        className="w-full h-[70vh] bg-[url('/about-hero.jpg')] bg-cover bg-center flex items-center justify-center relative"
+        className="w-full h-[70vh]  bg-cover bg-center flex items-center justify-center relative"
         data-aos="fade"
       >
         <div className="absolute inset-0 bg-black/60" />

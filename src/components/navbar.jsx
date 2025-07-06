@@ -84,7 +84,7 @@ function Navbar() {
 
         {/* Center Logo */}
         <div onClick={goToIntro} className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer">
-          <img src="logo_1.png" alt="Logo" className="h-15" />
+          <img src="/logo_1.png" alt="Logo" className="h-15" />
         </div>
 
         {/* Payment Icon */}
@@ -122,16 +122,16 @@ function Navbar() {
       <div className="hidden md:flex justify-between items-center h-14 w-full p-2 px-20">
         {/* Logo */}
         <div onClick={goToIntro} className="logo h-full w-14 flex justify-center items-center">
-          <img className="cursor-pointer" src="logo_1.png" alt="Logo" />
+          <img className="cursor-pointer" src="/logo_1.png" alt="Logo" />
         </div>
 
         {/* Menu Items */}
         <div className="menu-box flex justify-between items-center w-[60%] text-sm font-semibold gap-2">
-          <div onClick={goToIntro} className="cursor-pointer hover:scale-110 hover:border-1 border-blue-200 h-full w-fit p-2 rounded-lg flex items-center justify-center hover:bg-gray-100 hover:text-blue-600 transform-transition duration-200 ease-in-out">HOME</div>
-          <div onClick={goToDomestic} className="cursor-pointer hover:scale-110 hover:border-1 border-blue-200 h-full w-fit p-2 rounded-lg flex items-center justify-center hover:bg-gray-100 hover:text-blue-600 transform-transition duration-200 ease-in-out">DOMESTIC</div>
-          <div onClick={gotoInternational} className="cursor-pointer hover:scale-110 hover:border-1 border-blue-200 h-full w-fit p-2 rounded-lg flex items-center justify-center hover:bg-gray-100 hover:text-blue-600 transform-transition duration-200 ease-in-out">INTERNATIONAL</div>
-          <div onClick={goToContact} className="cursor-pointer hover:scale-110 hover:border-1 border-blue-200 h-full w-fit flex p-2 rounded-lg items-center justify-center hover:bg-gray-100 hover:text-blue-600 transform-transition duration-200 ease-in-out">CONTACT</div>
-          <div onClick={goToAbout} className="group cursor-pointer hover:scale-110 hover:border-1 border-blue-200 h-full w-fit p-2 rounded-lg flex items-center justify-center hover:bg-gray-100 hover:text-blue-600 transform-transition duration-200 ease-in-out">
+          <div onClick={goToIntro} className="cursor-pointer hover:scale-110 hover:border-1 border-blue-600 h-full w-fit p-2 rounded-lg flex items-center justify-center hover:bg-gray-100 hover:text-blue-600 transform-transition duration-200 ease-in-out">HOME</div>
+          <div onClick={goToDomestic} className="cursor-pointer hover:scale-110 hover:border-1 border-blue-600 h-full w-fit p-2 rounded-lg flex items-center justify-center hover:bg-gray-100 hover:text-blue-600 transform-transition duration-200 ease-in-out">DOMESTIC</div>
+          <div onClick={gotoInternational} className="cursor-pointer hover:scale-110 hover:border-1 border-blue-600 h-full w-fit p-2 rounded-lg flex items-center justify-center hover:bg-gray-100 hover:text-blue-600 transform-transition duration-200 ease-in-out">INTERNATIONAL</div>
+          <div onClick={goToContact} className="cursor-pointer hover:scale-110 hover:border-1 border-blue-600 h-full w-fit flex p-2 rounded-lg items-center justify-center hover:bg-gray-100 hover:text-blue-600 transform-transition duration-200 ease-in-out">CONTACT</div>
+          <div onClick={goToAbout} className="group cursor-pointer hover:scale-110 hover:border-1 border-blue-600 h-full w-fit p-2 rounded-lg flex items-center justify-center hover:bg-gray-100 hover:text-blue-600 transform-transition duration-200 ease-in-out">
             ABOUT
             <i className="ri-arrow-right-up-line inline-block transition-transform duration-300 group-hover:rotate-90 group-hover:text-green-400"></i>
           </div>

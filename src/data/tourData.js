@@ -1,0 +1,67 @@
+const tourData = [
+  {
+    id: 'manali',
+    title: 'Manali Adventure',
+    subtitle: 'Snowy Hills & Valley',
+    bgImage: 'manali.jpg',
+    overview: 'Manali is a beautiful hill station nestled in the Himalayas, famous for its snow-covered mountains, adventure activities, and romantic atmosphere.',
+    famousPlaces: ['Solang Valley', 'Rohtang Pass', 'Hidimba Temple', 'Old Manali'],
+    mapEmbedUrl: 'https://maps.google.com/maps?q=manali&output=embed',
+  },
+  {
+    id: 'goa',
+    title: 'Goa Beaches',
+    subtitle: 'Sun, Sand and Sea',
+    bgImage: 'goa.jpeg',
+    overview: 'Goa is known for its endless beaches, vibrant nightlife, Portuguese heritage, and laid-back vibes. A paradise for beach and party lovers.',
+    famousPlaces: ['Baga Beach', 'Calangute', 'Fort Aguada', 'Dudhsagar Falls'],
+    mapEmbedUrl: 'https://maps.google.com/maps?q=goa&output=embed',
+  },
+  {
+    id: 'shimla',
+    title: 'Shimla Hills',
+    subtitle: 'Queen of Hills',
+    bgImage: 'shimla.jpeg',
+    overview: 'Shimla is a colonial-era hill station in Himachal Pradesh, loved for its scenic beauty, Mall Road, and British architecture.',
+    famousPlaces: ['Mall Road', 'Jakhoo Temple', 'Kufri', 'The Ridge'],
+    mapEmbedUrl: 'https://maps.google.com/maps?q=shimla&output=embed',
+  },
+  {
+    id: 'coorg',
+    title: 'Coorg Highlands',
+    subtitle: 'Scotland of India',
+    bgImage: 'Coorg.jpeg',
+    overview: 'Coorg, in Karnataka, is known for its lush green hills, coffee plantations, waterfalls, and peaceful countryside.',
+    famousPlaces: ['Abbey Falls', 'Raja’s Seat', 'Namdroling Monastery', 'Dubare Elephant Camp'],
+    mapEmbedUrl: 'https://maps.google.com/maps?q=coorg&output=embed',
+  },
+  {
+    id: 'ladakh',
+    title: 'Ladakh Expedition',
+    subtitle: 'Land of High Passes',
+    bgImage: 'Ladakh.jpeg',
+    overview: 'Ladakh is a rugged, high-altitude desert region famous for its surreal landscapes, Buddhist monasteries, and adventurous road trips.',
+    famousPlaces: ['Pangong Lake', 'Magnetic Hill', 'Nubra Valley', 'Leh Palace'],
+    mapEmbedUrl: 'https://maps.google.com/maps?q=ladakh&output=embed',
+  },
+  {
+    id: 'darjeeling',
+    title: 'Darjeeling Charm',
+    subtitle: 'Land of the Thunderbolt',
+    bgImage: 'Darjeeling.jpeg',
+    overview: 'Darjeeling is a hill town in West Bengal famous for its tea plantations, toy train, and breathtaking views of Mount Kanchenjunga.',
+    famousPlaces: ['Tiger Hill', 'Batasia Loop', 'Peace Pagoda', 'Darjeeling Zoo'],
+    mapEmbedUrl: 'https://maps.google.com/maps?q=darjeeling&output=embed',
+  },
+  {
+    id: 'ooty',
+    title: 'Ooty Bliss',
+    subtitle: 'Queen of Hill Stations',
+    bgImage: 'Ooty.jpeg',
+    overview: 'Ooty is a popular hill station in Tamil Nadu known for its rolling tea gardens, colonial charm, and the Nilgiri Mountain Railway.',
+    famousPlaces: ['Ooty Lake', 'Botanical Gardens', 'Doddabetta Peak', 'Rose Garden'],
+    mapEmbedUrl: 'https://maps.google.com/maps?q=ooty&output=embed',
+  }
+];
+
+export default tourData;

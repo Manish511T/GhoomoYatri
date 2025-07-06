@@ -1,4 +1,5 @@
 import React, { use, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom';
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -24,6 +25,7 @@ const cards = [
 function Introduction() {
 
     const cardsRef = useRef(null);
+
 
     useGSAP(() => {
         gsap.fromTo(".mountain-8", { y: 150 }, { y: 0, duration: 1.5 })
@@ -138,29 +140,28 @@ function Introduction() {
                 <div className="cards-container overflow-x-auto h-full w-full mt-4 sm:mt-6 scroll-smooth scroll-px-4 snap-x snap-mandatory">
                     <div className="cards flex gap-4 sm:gap-6 w-max px-4 sm:px-10">
                         {[
-                            { name: "Shimla", tag: "Queen of Hills", img: "shimla.jpeg", shadow: "shadow-cyan-800" },
-                            { name: "Coorg", tag: "Scotland of India", img: "Coorg.jpeg", shadow: "shadow-lime-800" },
-                            { name: "Ladakh", tag: "The Moonland", img: "Ladakh.jpeg", shadow: "shadow-gray-600" },
-                            { name: "Darjeeling", tag: "The land of the thunderbolt", img: "Darjeeling.jpeg", shadow: "shadow-lime-800" },
-                            { name: "Ooty", tag: "Queen of Hill stations", img: "Ooty.jpeg", shadow: "shadow-lime-800" },
-                            { name: "Manali", tag: "Valley of Gods", img: "Manali.jpeg", shadow: "shadow-cyan-800" }
+                            { id: "shimla", name: "Shimla", tag: "Queen of Hills", img: "shimla.jpeg", shadow: "shadow-cyan-800" },
+                            { id: "coorg", name: "Coorg", tag: "Scotland of India", img: "Coorg.jpeg", shadow: "shadow-lime-800" },
+                            { id: "ladakh", name: "Ladakh", tag: "The Moonland", img: "Ladakh.jpeg", shadow: "shadow-gray-600" },
+                            { id: "darjeeling", name: "Darjeeling", tag: "The land of the thunderbolt", img: "Darjeeling.jpeg", shadow: "shadow-lime-800" },
+                            { id: "ooty", name: "Ooty", tag: "Queen of Hill stations", img: "Ooty.jpeg", shadow: "shadow-lime-800" },
+                            { id: "manali", name: "Manali", tag: "Valley of Gods", img: "Manali.jpeg", shadow: "shadow-cyan-800" }
                         ].map((place, idx) => (
-                            <div
-                                
-                                key={idx}
-                                className={`group card relative min-w-[180px] sm:min-w-[250px] h-[260px] sm:h-[300px] snap-start cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:${place.shadow} hover:scale-105 transform transition duration-300 ease-in-out`}
-                            >
-                                <img
-                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    src={place.img}
-                                    alt={place.name}
-                                    
-                                />
-                                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-3 sm:p-4 text-white">
-                                    <h3 className="text-base sm:text-lg font-bold">{place.name}</h3>
-                                    <p className="text-xs sm:text-sm">{place.tag}</p>
+                            <Link to={`/tour/${place.id}`} key={idx}>
+                                <div
+                                    className={`group card relative min-w-[180px] sm:min-w-[250px] h-[260px] sm:h-[300px] snap-start cursor-pointer overflow-hidden rounded-lg shadow-2xl hover:${place.shadow} hover:scale-105 transform transition duration-300 ease-in-out`}
+                                >
+                                    <img
+                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        src={place.img}
+                                        alt={place.name}
+                                    />
+                                    <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-3 sm:p-4 text-white">
+                                        <h3 className="text-base sm:text-lg font-bold">{place.name}</h3>
+                                        <p className="text-xs sm:text-sm">{place.tag}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -329,7 +330,7 @@ function Introduction() {
                     </div>
                 </div>
             </div>
-            <BrandLabel/>
+            <BrandLabel />
             <CallToAction />
             <Footer />
 

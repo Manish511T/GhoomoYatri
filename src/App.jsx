@@ -5,9 +5,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Intro from './components/intro'
 import Domestic from './pages/domestic';
 import International from './pages/international';
-import Home from './pages/home';
 import Contact from './pages/contact';
 import About from './pages/about';
+import TourDetails from './pages/dynamic';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -23,6 +23,8 @@ function App() {
           <Route path="/international" element={<International />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/tour/:id" element={<TourDetails/>}  />
+          {/* <Route path="/tour-preview" element={<TourDetails/>} /> */}
         </Routes>
       </Router>
     </>
