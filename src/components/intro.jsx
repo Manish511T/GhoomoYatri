@@ -22,6 +22,29 @@ const cards = [
     { name: "Vietnam", img: "Vietnam.jpg", shadow: "shadow-cyan-800" }
 ];
 
+const domesticTours = [
+    { id:'goa', name: 'Goa', tours: 19, image: 'Goa.jpg' },
+    { id:'hp', name: 'Himachal Pradesh', tours: 13, image: 'Himachal-Pradesh.jpg' },
+    { id:'northeast', name: 'Northeast', tours: 5, image: 'northeast-history.jpg' },
+    { id:'uttrakhand', name: 'Uttarakhand', tours: 13, image: 'Uttarakhand.webp' },
+    { id:'Ladakh', name: 'Ladakh', tours: 7, image: 'Pangong-Lake.jpg' },
+    { id:'kashmir', name: 'Kashmir', tours: 9, image: 'Kashmir.jpg' },
+    { id:'kerala', name: 'Kerala', tours: 7, image: 'kerala.webp' },
+    { id:'andaman', name: 'Andaman', tours: 5, image: 'Andaman.jpg' },
+    { id:'rajasthan', name: 'Rajasthan', tours: 19, image: 'Rajasthan.jpg' },
+];
+
+const tourCategories = [
+    { name: "Honeymoon", img: "Honeymoon-Packages.jpg", path: "honeymoon" },
+    { name: "Adventure", img: "Adventure-tour.jpg", path: "adventure" },
+    { name: "Eco Tourism", img: "Eco-Tourism.jpg", path: "eco-tourism" },
+    { name: "Escorted", img: "Escorted.jpg", path: "escorted" },
+    { name: "Group Tour", img: "Group-Tour-Packages.jpg", path: "group-tour" },
+    { name: "Leisure", img: "Leisure.jpg", path: "leisure" },
+    { name: "Pilgrimage", img: "Pilgrimage-Kedarnath.jpg", path: "pilgrimage" },
+    { name: "Trekking", img: "Trekking-and-backpacking.jpg", path: "trekking" }
+];
+
 function Introduction() {
 
     const cardsRef = useRef(null);
@@ -170,136 +193,76 @@ function Introduction() {
 
 
             {/* tour category section */}
-            <div className="TourCategory min-h-screen w-screen flex justify-center items-center relative overflow-hidden">
-                {/* Background Image */}
-                <div className="tourCategory-bg h-full w-full absolute">
-                    <img className="h-full w-full object-cover" src="River.jpeg" alt="" />
-                </div>
+            <div className="TourCategory relative min-h-screen w-screen flex justify-center items-center overflow-hidden bg-black">
 
-                {/* Dark Overlay */}
-                <div className="overlay h-full w-full opacity-10 bg-black absolute top-0 left-0"></div>
-                <div className="absolute top-0 left-0 w-full h-30 bg-gradient-to-t from-transparent to-black z-21" />
+                {/* Background Image */}
+                <img
+                    src="River.jpeg"
+                    alt="Tour Background"
+                    className="absolute inset-0 h-full w-full object-cover"
+                />
+
+                {/* Overlays */}
+                <div className="absolute inset-0 bg-black opacity-40 z-0" />
+                <div className="absolute top-0 w-full h-32 bg-gradient-to-t from-transparent to-black z-10" />
+                <div className="absolute bottom-0 w-full h-32 bg-gradient-to-b from-transparent to-black z-10" />
 
                 {/* Main Container */}
-                <div className="tourCategory-container  flex flex-col justify-evenly items-center h-150 w-full gap-5 relative z-10">
-                    <div className="boxes h-full w-[90%]  p-5 mt-5 flex flex-col justify-around items-center">
-                        <h1 className="text-5xl font-extrabold mb-2.5 text-white text-center">Tour Category</h1>
+                <div className="relative z-20 flex flex-col items-center gap-10 w-full px-4 py-16">
+                    <h1 className="text-4xl md:text-5xl font-extrabold text-white text-center">
+                        Tour Category
+                    </h1>
 
-                        {/* CARD GRID */}
-                        <div className="inner-box  h-full w-full  flex flex-wrap justify-center items-center gap-4 py-5 ">
-                            {[
-                                { name: "Honeymoon", img: "Honeymoon-Packages.jpg", path: "honeymoon" },
-                                { name: "Adventure", img: "Adventure-tour.jpg", path: "adventure" },
-                                { name: "Eco Tourism", img: "Eco-Tourism.jpg", path: "eco-tourism" },
-                                { name: "Escorted", img: "Escorted.jpg", path: "escorted" },
-                                { name: "Group Tour", img: "Group-Tour-Packages.jpg", path: "group-tour" },
-                                { name: "Leisure", img: "Leisure.jpg", path: "leisure" },
-                                { name: "Pilgrimage", img: "Pilgrimage-Kedarnath.jpg", path: "pilgrimage" },
-                                { name: "Trekking", img: "Trekking-and-backpacking.jpg", path: "trekking" }
-                            ].map((card, idx) => (
-                                <Link to={`/${card.path}`} key={idx}>
-                                    <div className="group/card relative h-52 w-72 overflow-hidden rounded-lg cursor-pointer transition-all duration-300 ease-in-out">
-                                        <img
-                                            className="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-105"
-                                            src={card.img}
-                                            alt={card.name}
-                                        />
-                                        <div className="absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/70 px-6 py-2 text-white font-semibold text-lg rounded">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-6xl">
+                        {tourCategories.map((card, idx) => (
+                            <Link to={`/${card.path}`} key={idx} aria-label={`Go to ${card.name}`}>
+                                <div className="relative h-52 w-full rounded-xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow duration-300">
+                                    <img
+                                        src={card.img}
+                                        alt={card.name}
+                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0  transition-all duration-300" />
+                                    <div className="absolute inset-0 flex justify-center items-center">
+                                        <span className="text-white text-lg font-semibold bg-black/40 px-4 py-2 rounded-lg backdrop-blur-sm">
                                             {card.name}
-                                        </div>
+                                        </span>
                                     </div>
-                                </Link>
-                            ))}
-
-                        </div>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
-
-                {/* Bottom Gradient */}
-                <div className="absolute bottom-0 left-0 w-full h-30 bg-gradient-to-b from-transparent to-black z-20" />
             </div>
 
             {/* domestic tours */}
-            <div className="domestic-tour-wrapper bg-amber-50 h-190 w-screen overflow-hidden flex flex-col justify-center items-center  relative">
-                <div className='w-screen flex justify-center items-center m-5'>
-                    <h1 className='text-[#1A2B48] text-5xl font-semibold'>DOMESTIC</h1>
-                </div>
-                <div className="domestic-card-container flex flex-wrap justify-evenly items-center w-[90%] h-full  mb-10 relative overflow-y-auto p-2 gap-2">
-                    <div className="card group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
-                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%] '></div>
-                        <img src="Goa.jpg" alt="" className=' h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
-                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
-                            <h1 className='text-4xl  '>Goa</h1>
-                            <h7>19 Tours</h7>
-                        </div>
-                    </div>
-                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
-                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Himachal-Pradesh.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
-                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
-                            <h1 className='text-4xl  '>Himachal Pradesh</h1>
-                            <h7>13 Tours</h7>
-                        </div>
-                    </div>
-                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
-                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="northeast-history.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
-                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
-                            <h1 className='text-4xl  '>Northeast</h1>
-                            <h7>5 Tours</h7>
-                        </div>
-                    </div>
-                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
-                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Uttarakhand.webp" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
-                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
-                            <h1 className='text-4xl  '>Uttrakhand</h1>
-                            <h7>13 Tours</h7>
-                        </div>
-                    </div>
-                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
-                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Pangong-Lake.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
-                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
-                            <h1 className='text-4xl '>Ladkh</h1>
-                            <h7>7 Tours</h7>
-                        </div>
-                    </div>
-                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
-                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Kashmir.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
-                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
-                            <h1 className='text-4xl  '>Kashmir</h1>
-                            <h7>9 Tours</h7>
-                        </div>
-                    </div>
-                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
-                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="kerala.webp" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
-                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
-                            <h1 className='text-4xl  '>Kerala</h1>
-                            <h7>7 Tours</h7>
-                        </div>
-                    </div>
-                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
-                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Andaman.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
-                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
-                            <h1 className='text-4xl  '>Andaman</h1>
-                            <h7>5 Tours</h7>
-                        </div>
-                    </div>
-                    <div className="card  group hover:scale-105 transform transition duration-300 ease-in-out h-50 w-90 bg-blue-500 rounded-2xl  overflow-hidden relative">
-                        <div className='absolute w-full h-full bg-black opacity-20 left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'></div>
-                        <img src="Rajasthan.jpg" alt="" className='h-full w-full object-cover transform transition duration-1000 group-hover:scale-110' />
-                        <div className='absolute w-full flex flex-col justify-center items-center left-[50%] top-[50%] transform -translate-x-[50%] -translate-y-[50%]'>
-                            <h1 className='text-4xl'>Rajasthan</h1>
-                            <h7>19 Tours</h7>
-                        </div>
-                    </div>
-                </div>
+            <div className="domestic-tour-wrapper bg-amber-50 w-screen flex flex-col items-center py-10">
+                <h1 className="text-[#1A2B48] text-5xl font-semibold mb-8">DOMESTIC</h1>
 
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-[90%] max-w-6xl">
+                    {domesticTours.map((place, index) => (
+                        <Link to={`/tour/${place.id}`}>
+                        <div
+                            key={index}
+                            className="relative group h-64 w-full bg-blue-500 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300"
+                        >
+                            {/* Image with overlay */}
+                            <img
+                                src={place.image}
+                                alt={place.name}
+                                className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-black opacity-30"></div>
 
+                            {/* Centered text */}
+                            <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
+                                <h2 className="text-3xl font-bold">{place.name}</h2>
+                                <p className="text-sm mt-1">{place.tours} Tours</p>
+                            </div>
+                        </div>
+                        </Link>
+                    ))}
+                </div>
             </div>
 
             {/* International tour */}

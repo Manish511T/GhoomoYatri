@@ -12,10 +12,30 @@ const tourData = [
     id: 'goa',
     title: 'Goa Beaches',
     subtitle: 'Sun, Sand and Sea',
-    bgImage: 'goa.jpeg',
-    overview: 'Goa is known for its endless beaches, vibrant nightlife, Portuguese heritage, and laid-back vibes. A paradise for beach and party lovers.',
-    famousPlaces: ['Baga Beach', 'Calangute', 'Fort Aguada', 'Dudhsagar Falls'],
-    mapEmbedUrl: 'https://maps.google.com/maps?q=goa&output=embed',
+    bgImage: 'Goa.jpg',
+    overview: 'Goa is known for its vibrant beaches, nightlife, and Portuguese heritage. It’s a perfect blend of relaxation, adventure, and culture.',
+    famousPlaces: [
+      'Baga Beach',
+      'Calangute Beach',
+      'Fort Aguada',
+      'Dudhsagar Falls',
+      'Anjuna Beach',
+      'Vagator Beach',
+      'Chapora Fort',
+      'Candolim Beach',
+      'Basilica of Bom Jesus',
+      'Se Cathedral',
+      'Colva Beach',
+      'Palolem Beach',
+      'Arambol Beach',
+      'Miramar Beach',
+      'Shri Mangeshi Temple',
+      'Butterfly Beach',
+      'Sinquerim Beach',
+      'Fontainhas Latin Quarter',
+      'Reis Magos Fort'
+    ],
+    mapEmbedUrl: 'https://maps.google.com/maps?q=goa&output=embed'
   },
   {
     id: 'shimla',
@@ -39,7 +59,7 @@ const tourData = [
     id: 'ladakh',
     title: 'Ladakh Expedition',
     subtitle: 'Land of High Passes',
-    bgImage: 'Ladakh.jpeg',
+    bgImage: 'Pangong-Lake.jpg',
     overview: 'Ladakh is a rugged, high-altitude desert region famous for its surreal landscapes, Buddhist monasteries, and adventurous road trips.',
     famousPlaces: ['Pangong Lake', 'Magnetic Hill', 'Nubra Valley', 'Leh Palace'],
     mapEmbedUrl: 'https://maps.google.com/maps?q=ladakh&output=embed',
@@ -61,7 +81,166 @@ const tourData = [
     overview: 'Ooty is a popular hill station in Tamil Nadu known for its rolling tea gardens, colonial charm, and the Nilgiri Mountain Railway.',
     famousPlaces: ['Ooty Lake', 'Botanical Gardens', 'Doddabetta Peak', 'Rose Garden'],
     mapEmbedUrl: 'https://maps.google.com/maps?q=ooty&output=embed',
-  }
+  },
+  {
+    id: 'hp',
+    title: 'Himachal Pradesh Escape',
+    subtitle: 'Land of Gods and Hills',
+    bgImage: 'Himachal-Pradesh.jpg',
+    overview: 'Himachal Pradesh, nestled in the Himalayas, offers majestic snow-capped mountains, lush valleys, and spiritual serenity. It is a haven for nature lovers, trekkers, honeymooners, and those seeking peace.',
+    famousPlaces: [
+      'Shimla',
+      'Manali',
+      'Dharamshala',
+      'Dalhousie',
+      'Spiti Valley',
+      'Kullu',
+      'Kasol',
+      'Kinnaur',
+      'Chamba',
+      'Bir Billing',
+      'Kufri',
+      'Narkanda',
+      'Tirthan Valley'
+    ],
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445746.637097391!2d75.22478911373154!3d31.10415243751126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390488a2a74c979f%3A0x3e9c7e3b49f41ef6!2sHimachal%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin'
+  },
+  {
+  id: 'northeast',
+  title: 'Mystical Northeast India',
+  subtitle: 'Unexplored Paradise',
+  bgImage: 'northeast-history.jpg',
+  overview: 'The Northeast of India is a treasure trove of untouched natural beauty, rich tribal culture, lush green landscapes, and serene monasteries. It is perfect for travelers seeking authenticity and adventure off the beaten path.',
+  famousPlaces: [
+    'Kaziranga National Park (Assam)',
+    'Tawang Monastery (Arunachal Pradesh)',
+    'Cherrapunji (Meghalaya)',
+    'Loktak Lake (Manipur)',
+    'Ziro Valley (Arunachal Pradesh)'
+  ],
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640034.489105153!2d90.35653162537306!3d26.15419914078126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3745c0d66b808ea1%3A0x1993dbb22d0e9dc!2sNorth%20East%20India!5e0!3m2!1sen!2sin!4v1700000000001!5m2!1sen!2sin'
+},
+{
+  id: 'uttrakhand',
+  title: 'Uttarakhand Escapes',
+  subtitle: 'Dev Bhoomi of the Himalayas',
+  bgImage: 'Uttarakhand.webp',
+  overview: 'Uttarakhand, known as the Land of the Gods (Dev Bhoomi), is a serene state nestled in the Himalayas. It offers a blend of spirituality, natural beauty, adventure, and wildlife, making it an ideal destination for all types of travelers.',
+  famousPlaces: [
+    'Rishikesh – Yoga Capital of the World',
+    'Haridwar – Sacred Ghats and Ganga Aarti',
+    'Nainital – Lake District',
+    'Mussoorie – Queen of the Hills',
+    'Auli – Ski Resort of India',
+    'Jim Corbett National Park',
+    'Badrinath Temple',
+    'Kedarnath Temple',
+    'Valley of Flowers National Park',
+    'Chopta – Mini Switzerland of India',
+    'Lansdowne – Serene Hill Station',
+    'Almora – Cultural Heritage Town',
+    'Mukteshwar – Himalayan Views & Peace'
+  ],
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1371340.911973478!2d77.85871926769358!3d30.066753139963317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39093d08e40a83e3%3A0xadee40f7a35bdff3!2sUttarakhand!5e0!3m2!1sen!2sin!4v1700000000002!5m2!1sen!2sin'
+},
+{
+  id: 'Ladakh',
+  title: 'Ladakh Adventures',
+  subtitle: 'Land of High Passes',
+  bgImage: 'Pangong-Lake.jpg',
+  overview: 'Ladakh, located in the northernmost region of India, is known for its stark landscapes, ancient monasteries, high-altitude mountain passes, and crystal-clear lakes. A paradise for bikers, trekkers, and nature lovers, Ladakh offers unmatched serenity and adventure.',
+  famousPlaces: [
+    'Pangong Lake – Changing Hues of Blue',
+    'Leh Palace – Historic Royal Residence',
+    'Magnetic Hill – Gravity Defying Phenomenon',
+    'Khardung La Pass – One of the World’s Highest Motorable Roads',
+    'Nubra Valley – Sand Dunes & Double Hump Camels',
+    'Hemis Monastery – Largest Monastery in Ladakh',
+    'Tso Moriri Lake – Peaceful and Pristine'
+  ],
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2737775.148310471!2d75.08960313719455!3d33.945640179948755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38fdc441b63b0f5b%3A0x1db9e0f9022c9f5e!2sLadakh!5e0!3m2!1sen!2sin!4v1700000000007!5m2!1sen!2sin'
+},
+{
+  id: 'kashmir',
+  title: 'Kashmir Valley Tour',
+  subtitle: 'Heaven on Earth',
+  bgImage: 'Kashmir.jpg',
+  overview: 'Kashmir, often called "Paradise on Earth", is known for its breathtaking valleys, alpine meadows, pristine lakes, and houseboats. It’s a haven for honeymooners, nature lovers, and adventure seekers alike.',
+  famousPlaces: [
+    'Srinagar – Houseboats and Dal Lake',
+    'Gulmarg – Skiing and Gondola Ride',
+    'Pahalgam – Valleys and River Lidder',
+    'Sonamarg – Gateway to Ladakh',
+    'Betaab Valley – Bollywood Favorite',
+    'Aru Valley – Scenic Meadows',
+    'Shankaracharya Temple – Panoramic Viewpoint',
+    'Nishat Bagh – Mughal Garden',
+    'Hazratbal Shrine – Revered Mosque by Dal Lake'
+  ],
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27190.405120275753!2d74.7972824!3d34.0836704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e186eb72e2eecd%3A0x83d168888af53fa3!2sSrinagar%2C%20Jammu%20and%20Kashmir!5e0!3m2!1sen!2sin!4v1700000001111!5m2!1sen!2sin'
+},
+{
+  id: 'kerala',
+  title: 'Kerala Backwaters & Hills',
+  subtitle: 'God’s Own Country',
+  bgImage: 'kerala.webp',
+  overview: 'Kerala, nestled between the Western Ghats and the Arabian Sea, is known for its tranquil backwaters, lush greenery, Ayurvedic retreats, tea plantations, and vibrant culture. It offers a perfect blend of nature, wellness, and tradition.',
+  famousPlaces: [
+    'Alleppey – Houseboats and Backwaters',
+    'Munnar – Tea Gardens and Hill Views',
+    'Thekkady – Periyar Wildlife Sanctuary',
+    'Kochi – Fort Kochi and Marine Drive',
+    'Wayanad – Waterfalls and Caves',
+    'Kumarakom – Bird Sanctuary and Vembanad Lake',
+    'Varkala – Cliff Beaches and Spiritual Vibes'
+  ],
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31463.45249719289!2d76.3051613!3d9.4980669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0872b2f49e5e8f%3A0x4a1f6c2d5ec4a089!2sAlappuzha%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000002222!5m2!1sen!2sin'
+},
+{
+  id: 'andaman',
+  title: 'Andaman Islands Escape',
+  subtitle: 'Tropical Paradise in the Bay of Bengal',
+  bgImage: 'Andaman.jpg',
+  overview: 'The Andaman Islands are a group of idyllic islands known for their pristine beaches, clear turquoise waters, coral reefs, and unique biodiversity. A perfect spot for beach lovers, scuba divers, and honeymooners.',
+  famousPlaces: [
+    'Radhanagar Beach – Sunset and White Sand',
+    'Havelock Island – Scuba Diving & Snorkeling',
+    'Cellular Jail – Historical Landmark',
+    'Ross Island – British Colonial Ruins',
+    'Baratang Island – Limestone Caves & Mud Volcano'
+  ],
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252283.9288907281!2d92.6586401!3d11.7400865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x308893351d1d39df%3A0x59cb4b05c4c787e6!2sAndaman%20and%20Nicobar%20Islands!5e0!3m2!1sen!2sin!4v1700000003333!5m2!1sen!2sin'
+},
+{
+  id: 'rajasthan',
+  title: 'Royal Rajasthan Tour',
+  subtitle: 'Palaces, Deserts & Heritage',
+  bgImage: 'Rajasthan.jpg',
+  overview: 'Rajasthan, the land of kings, offers an unmatched experience of heritage, royalty, desert landscapes, and colorful culture. Explore magnificent forts, regal palaces, and vibrant bazaars across this majestic Indian state.',
+  famousPlaces: [
+    'Jaipur – Hawa Mahal, City Palace',
+    'Udaipur – Lake Pichola & City Palace',
+    'Jaisalmer – Golden Fort & Sam Sand Dunes',
+    'Jodhpur – Mehrangarh Fort & Blue City',
+    'Pushkar – Brahma Temple & Camel Fair',
+    'Mount Abu – Dilwara Temples',
+    'Ajmer – Dargah Sharif',
+    'Bikaner – Junagarh Fort & Camel Safari',
+    'Ranthambore – Tiger Reserve & Jungle Safari',
+    'Chittorgarh – Chittor Fort',
+    'Bundi – Stepwells & Palaces',
+    'Alwar – Sariska Tiger Reserve',
+    'Kumbhalgarh – Kumbhalgarh Fort',
+    'Mandawa – Havelis & Frescoes',
+    'Shekhawati – Painted Havelis',
+    'Bharatpur – Keoladeo Bird Sanctuary',
+    'Tonk – Mosques & Colonial Architecture',
+    'Barmer – Folk Culture & Crafts',
+    'Nagaur – Fort & Cattle Fair'
+  ],
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755584.716742735!2d69.19771472584793!3d26.56013108702756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db4d3dc735f41%3A0x6c9b3a0b4ff4b69!2sRajasthan!5e0!3m2!1sen!2sin!4v1700000001234!5m2!1sen!2sin'
+}
+
 ];
 
 export default tourData;

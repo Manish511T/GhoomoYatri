@@ -20,7 +20,7 @@ function TourDetails() {
     <div className='tour-details-container flex flex-col    text-black'>
         <Hero title={tour.title} subtitle={tour.subtitle} bgImage={tour.bgImage}  />
         <Overview description={tour.overview}  />
-        <div className="flex flex-col md:flex-row gap-4 py-4 px-20">
+        <div className=" flex flex-col  md:flex-row gap-4 py-4 px-20">
             <FamousPlaces places={tour.famousPlaces}/>
             <MapSection url={tour.mapEmbedUrl}/>
         </div>
