@@ -8,6 +8,7 @@ import Navbar from './navbar';
 import Footer from './footer';
 import CallToAction from './callToAction';
 import BrandLabel from './brandLabel';
+import { Analytics } from "@vercel/analytics/react"
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -293,6 +294,7 @@ function Introduction() {
                     </div>
                 </div>
             </div>
+            <Analytics/>
             <BrandLabel />
             <CallToAction />
             <Footer />
