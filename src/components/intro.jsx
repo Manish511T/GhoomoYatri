@@ -188,29 +188,29 @@ function Introduction() {
                         {/* CARD GRID */}
                         <div className="inner-box  h-full w-full  flex flex-wrap justify-center items-center gap-4 py-5 ">
                             {[
-                                { name: "Honeymoon", img: "Honeymoon-Packages.jpg" },
-                                { name: "Adventure", img: "Adventure-tour.jpg" },
-                                { name: "Eco Tourism", img: "Eco-Tourism.jpg" },
-                                { name: "Escorted", img: "Escorted.jpg" },
-                                { name: "Group Tour", img: "Group-Tour-Packages.jpg" },
-                                { name: "Leisure", img: "Leisure.jpg" },
-                                { name: "Pilgrimage", img: "Pilgrimage-Kedarnath.jpg" },
-                                { name: "Trekking", img: "Trekking-and-backpacking.jpg" }
+                                { name: "Honeymoon", img: "Honeymoon-Packages.jpg", path: "honeymoon" },
+                                { name: "Adventure", img: "Adventure-tour.jpg", path: "adventure" },
+                                { name: "Eco Tourism", img: "Eco-Tourism.jpg", path: "eco-tourism" },
+                                { name: "Escorted", img: "Escorted.jpg", path: "escorted" },
+                                { name: "Group Tour", img: "Group-Tour-Packages.jpg", path: "group-tour" },
+                                { name: "Leisure", img: "Leisure.jpg", path: "leisure" },
+                                { name: "Pilgrimage", img: "Pilgrimage-Kedarnath.jpg", path: "pilgrimage" },
+                                { name: "Trekking", img: "Trekking-and-backpacking.jpg", path: "trekking" }
                             ].map((card, idx) => (
-                                <div
-                                    key={idx}
-                                    className="group/card relative h-52 w-72 overflow-hidden rounded-lg cursor-pointer transition-all duration-300 ease-in-out"
-                                >
-                                    <img
-                                        className="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-105"
-                                        src={card.img}
-                                        alt={card.name}
-                                    />
-                                    <div className="absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/70 px-6 py-2 text-white font-semibold text-lg rounded">
-                                        {card.name}
+                                <Link to={`/${card.path}`} key={idx}>
+                                    <div className="group/card relative h-52 w-72 overflow-hidden rounded-lg cursor-pointer transition-all duration-300 ease-in-out">
+                                        <img
+                                            className="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-105"
+                                            src={card.img}
+                                            alt={card.name}
+                                        />
+                                        <div className="absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/70 px-6 py-2 text-white font-semibold text-lg rounded">
+                                            {card.name}
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
+
                         </div>
                     </div>
                 </div>
@@ -315,7 +315,7 @@ function Introduction() {
                         {[...cards, ...cards].map((place, idx) => (
                             <div
                                 key={idx}
-                                className={`group card relative h-60 w-60 rounded-full cursor-pointer overflow-hidden shadow-2xl shadow-black hover:${place.shadow} hover:scale-105 transform transition duration-400 ease-in-out`}
+                                className={`group card relative h-60 w-60 rounded-full  overflow-hidden shadow-2xl shadow-black hover:${place.shadow} hover:scale-105 transform transition duration-400 ease-in-out`}
                             >
                                 <img
                                     className="h-full w-full object-cover transform transition duration-500 group-hover:scale-110"
