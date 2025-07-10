@@ -19,7 +19,7 @@ function TourDetails() {
     <Navbar />
     <div className='tour-details-container flex flex-col    text-black'>
         <Hero title={tour.title} subtitle={tour.subtitle} bgImage={tour.bgImage}  />
-        <Overview description={tour.overview}  />
+        <Overview description={tour.overview} intro={tour.intro}  />
         <div className=" flex flex-col  md:flex-row gap-4 py-4 px-20">
             <FamousPlaces places={tour.famousPlaces}/>
             <MapSection url={tour.mapEmbedUrl}/>
