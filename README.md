@@ -7,6 +7,9 @@
 Ghoomo Yatri is a modern, responsive travel and tourism web application that allows users to explore, book, and inquire about domestic and international tour packages. It provides a seamless frontend and backend experience using **React**, **Tailwind CSS**, and **Node.js/Express**, deployed on **Render** and monitored using **UptimeRobot**.
 
 ---
+## 🎥 Logo animation
+
+![GhoomoYatri Demo](./public/Logo_animation.gif)
 
 ## 📁 Project Structure
 
