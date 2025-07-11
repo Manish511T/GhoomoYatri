@@ -166,7 +166,7 @@ EMAIL_PASS=your-email-password
     <td align="center">
       <strong>International Tour Page</strong><br>
       <a href="./public/International.png" target="_blank">
-        <img src="./public/International.png" alt="About Page" width="300px" />
+        <img src="./public/International.png" alt="International Tour Page" width="300px" />
       </a>
     </td>
     <td align="center">
@@ -180,13 +180,13 @@ EMAIL_PASS=your-email-password
   <td align="center">
       <strong>About us Page</strong><br>
       <a href="./public/About_us.png" target="_blank">
-        <img src="./public/About_us.png" alt="Contact Page" width="300px" />
+        <img src="./public/About_us.png" alt="About Page" width="300px" />
       </a>
     </td>
     <td align="center">
       <strong>Tour Category Page</strong><br>
       <a href="./public/Tour_category.png" target="_blank">
-        <img src="./public/Tour_category.png" alt="About Page" width="300px" />
+        <img src="./public/Tour_category.png" alt="Tour Category Page" width="300px" />
       </a>
     </td>
   </tr>
@@ -194,7 +194,7 @@ EMAIL_PASS=your-email-password
   <td align="center">
       <strong>Tour Places Page</strong><br>
       <a href="./public/Tour_places.png" target="_blank">
-        <img src="./public/Tour_places.png" alt="Contact Page" width="300px" />
+        <img src="./public/Tour_places.png" alt="Tour Places Page" width="300px" />
       </a>
     </td>
   </tr>
