@@ -11,6 +11,14 @@ Ghoomo Yatri is a modern, responsive travel and tourism web application that all
 
 ![GhoomoYatri Demo](./public/Logo_animation.gif)
 
+
+## 🎥 Demo
+
+Here’s how the GhoomoYatri app works in action:
+
+![GhoomoYatri Demo](./public/Demo.gif)
+
+
 ## 📁 Project Structure
 
 ```
