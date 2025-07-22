@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; 
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import CallToAction from '../components/callToAction';
@@ -12,7 +13,7 @@ const regions = ["All", "North India", "South India", "East India", "West India"
 // Destination data
 const destinations = [
   {
-    id: 1,
+    id: "goa",
     title: "Goa",
     subtitle: "West Coast",
     region: "West India",
@@ -21,7 +22,7 @@ const destinations = [
     rating: 5
   },
   {
-    id: 2,
+    id: "manali",
     title: "Manali",
     subtitle: "Himachal Pradesh",
     region: "North India",
@@ -30,16 +31,7 @@ const destinations = [
     rating: 5
   },
   {
-    id: 3,
-    title: "Kaziranga",
-    subtitle: "Assam",
-    region: "North-East India",
-    image: "northeast-history.jpg",
-    description: "A UNESCO World Heritage site famous for one-horned rhinoceroses.",
-    rating: 4
-  },
-  {
-    id: 4,
+    id: "nainital",
     title: "Nainital",
     subtitle: "Uttarakhand",
     region: "North India",
@@ -48,7 +40,7 @@ const destinations = [
     rating: 4
   },
   {
-    id: 5,
+    id: "pangong-lake",
     title: "Pangong Lake",
     subtitle: "Ladakh",
     region: "North India",
@@ -57,7 +49,7 @@ const destinations = [
     rating: 5
   },
   {
-    id: 6,
+    id: "gulmarg",
     title: "Gulmarg",
     subtitle: "Kashmir",
     region: "North India",
@@ -66,7 +58,7 @@ const destinations = [
     rating: 5
   },
   {
-    id: 7,
+    id: "alleppey",
     title: "Alleppey",
     subtitle: "Kerala",
     region: "South India",
@@ -75,7 +67,7 @@ const destinations = [
     rating: 4
   },
   {
-    id: 8,
+    id: "havelock-island",
     title: "Havelock Island",
     subtitle: "Andaman",
     region: "South India",
@@ -84,7 +76,7 @@ const destinations = [
     rating: 5
   },
   {
-    id: 9,
+    id: "darjeeling",
     title: "Darjeeling",
     subtitle: "West Bengal",
     region: "East India",
@@ -93,7 +85,7 @@ const destinations = [
     rating: 5
   },
   {
-    id: 10,
+    id: "konark-sun-temple",
     title: "Konark Sun Temple",
     subtitle: "Odisha",
     region: "East India",
@@ -102,7 +94,7 @@ const destinations = [
     rating: 5
   },
   {
-    id: 11,
+    id: "bodh-gaya",
     title: "Bodh Gaya",
     subtitle: "Bihar",
     region: "East India",
@@ -111,7 +103,7 @@ const destinations = [
     rating: 4.8
   },
   {
-    id: 12,
+    id: "chilika-lake",
     title: "Chilika Lake",
     subtitle: "Odisha",
     region: "East India",
@@ -120,7 +112,7 @@ const destinations = [
     rating: 4.7
   },
   {
-    id: 13,
+    id: "sundarbans",
     title: "Sundarbans",
     subtitle: "West Bengal",
     region: "East India",
@@ -129,7 +121,7 @@ const destinations = [
     rating: 4.9
   },
   {
-    id: 14,
+    id: "kaziranga-national-park",
     title: "Kaziranga National Park",
     subtitle: "Assam",
     region: "North-East India",
@@ -138,7 +130,7 @@ const destinations = [
     rating: 5
   },
   {
-    id: 15,
+    id: "tawang-monastery",
     title: "Tawang Monastery",
     subtitle: "Arunachal Pradesh",
     region: "North-East India",
@@ -147,7 +139,7 @@ const destinations = [
     rating: 4.8
   },
   {
-    id: 16,
+    id: "living-root-bridge",
     title: "Living Root Bridges",
     subtitle: "Meghalaya",
     region: "North-East India",
@@ -156,7 +148,7 @@ const destinations = [
     rating: 4.9
   },
   {
-    id: 17,
+    id: "loktak-lake",
     title: "Loktak Lake",
     subtitle: "Manipur",
     region: "North-East India",
@@ -165,7 +157,7 @@ const destinations = [
     rating: 4.7
   },
   {
-    id: 18,
+    id: "ziro-valley",
     title: "Ziro Valley",
     subtitle: "Arunachal Pradesh",
     region: "North-East India",
@@ -173,7 +165,6 @@ const destinations = [
     description: "A picturesque valley known for the Ziro Music Festival and lush paddy fields.",
     rating: 4.9
   }
-
 ];
 
 // Define reasons for choosing domestic tours
@@ -327,6 +318,7 @@ const Domestic = () => {
         {/* Grid of filtered destinations */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {filteredDestinations.map((item) => (
+            <Link to={`/domestic/${item.id}`} key={item.id}>
             <div
               data-aos="fade-up"
               key={item.id}
@@ -349,6 +341,7 @@ const Domestic = () => {
                 </div>
               </div>
             </div>
+            </Link>
 
           ))}
         </div>

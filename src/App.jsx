@@ -10,6 +10,7 @@ import Intro from './components/intro';
 // Lazy-loaded pages
 const Domestic = React.lazy(() => import('./pages/domestic'));
 const International = React.lazy(() => import('./pages/international'));
+const DestinationDetails = React.lazy(() => import('./pages/DestinationDetails'));
 const Contact = React.lazy(() => import('./pages/contact'));
 const About = React.lazy(() => import('./pages/about'));
 const TourDetails = React.lazy(() => import('./pages/dynamic'));
@@ -31,7 +32,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Intro />} />
           <Route path="/domestic" element={<Domestic />} />
+          <Route path="/domestic/:id" element={<DestinationDetails/>}/>
           <Route path="/international" element={<International />} />
+          <Route path="/international/:id" element={<DestinationDetails />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/tour/:id" element={<TourDetails />} />
