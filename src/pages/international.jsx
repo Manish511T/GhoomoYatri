@@ -1,4 +1,3 @@
-// --- Updated International.jsx with Dynamic Routing Support ---
 
 import React, { useState, useEffect } from 'react';
 import { Link, Links, useNavigate } from 'react-router-dom';
@@ -13,58 +12,68 @@ const regions = ["All", "Europe", "Asia", "Africa", "North America", "South Amer
 
 const destinations = [
   {
-    id: "paris",
-    title: "Paris",
-    subtitle: "France",
-    region: "Europe",
-    image: "paris.jpg",
-    description: "The city of lights, known for the Eiffel Tower, romance, and art museums.",
+    id: "dubai",
+    title: "Dubai",
+    subtitle: "United Arab Emirates",
+    region: "Middle East",
+    image: "Dubai.jpg",
+    description: "A futuristic metropolis famed for its towering skyscrapers, luxury shopping, desert adventures, and the iconic Burj Khalifa.",
     rating: 5
-  },
+  }
+  ,
   {
-    id: "tokyo",
-    title: "Tokyo",
-    subtitle: "Japan",
+    id: "indonesia",
+    title: "Indonesia",
+    subtitle: "Southeast Asia",
     region: "Asia",
-    image: "tokyo.jpg",
-    description: "A vibrant city blending modern technology with traditional temples.",
+    image: "Indonesia.jpg",
+    description: "An archipelago of over 17,000 islands, Indonesia dazzles with tropical beaches, volcanic landscapes, vibrant cultures, and iconic destinations like Bali and Jakarta.",
     rating: 5
   },
   {
-    id: "cape-town",
-    title: "Cape Town",
-    subtitle: "South Africa",
+    id: "mauritius",
+    title: "Mauritius",
+    subtitle: "Indian Ocean",
     region: "Africa",
-    image: "cape-town.jpg",
-    description: "Known for Table Mountain, beaches, and cultural diversity.",
-    rating: 4.8
-  },
-  {
-    id: "new-york",
-    title: "New York",
-    subtitle: "USA",
-    region: "North America",
-    image: "New-york.jpg",
-    description: "The city that never sleeps — iconic skyline, Times Square, and Central Park.",
+    image: "Mauritius.jpg",
+    description: "A tropical paradise known for its turquoise lagoons, coral reefs, lush mountains, and the surreal underwater waterfall illusion off its coast.",
     rating: 5
   },
   {
-    id: "rio",
-    title: "Rio de Janeiro",
-    subtitle: "Brazil",
-    region: "South America",
-    image: "Brazil.jpg",
-    description: "Famous for Christ the Redeemer, beaches, and carnival festivals.",
-    rating: 4.7
+    id: "singapore",
+    title: "Singapore",
+    subtitle: "Singapore",
+    region: "Asia",
+    image: "Singapore.jpg",
+    description: "A sleek island city-state known for its futuristic skyline, lush green spaces, multicultural heritage, and attractions like Marina Bay Sands, Gardens by the Bay, and Sentosa Island.",
+    rating: 5
   },
   {
-    id: "sydney",
-    title: "Sydney",
-    subtitle: "Australia",
-    region: "Australia",
-    image: "sedney.jpg",
-    description: "Home to the Sydney Opera House and beautiful coastal walks.",
-    rating: 4.9
+    id: "sri-lanka",
+    title: "Sri Lanka",
+    subtitle: "South Asia",
+    region: "Asia",
+    image: "Sri-Lanka.jpg",
+    description: "A teardrop-shaped island rich in history, wildlife, and tropical beauty—Sri Lanka offers ancient ruins, golden beaches, lush tea plantations, and cultural gems like Sigiriya and Kandy.",
+    rating: 5
+  },
+  {
+    id: "thailand",
+    title: "Thailand",
+    subtitle: "Southeast Asia",
+    region: "Asia",
+    image: "thailand.jpg",
+    description: "Known as the 'Land of Smiles', Thailand enchants with its golden temples, tropical islands, bustling street markets, and rich cultural heritage—from Bangkok’s urban energy to the serene beaches of Phuket and Krabi.",
+    rating: 5
+  },
+  {
+    id: "vietnam",
+    title: "Vietnam",
+    subtitle: "Southeast Asia",
+    region: "Asia",
+    image: "Vietnam.jpg",
+    description: "A land of breathtaking contrasts—Vietnam enchants with emerald rice paddies, limestone karsts, bustling cities like Hanoi and Ho Chi Minh, and serene escapes like Ha Long Bay and Hoi An.",
+    rating: 5
   }
 ];
 
@@ -106,7 +115,7 @@ const International = () => {
     <>
       <Navbar />
 
-{/* === HERO SECTION === */}
+      {/* === HERO SECTION === */}
       <div className="w-screen px-6 flex items-center justify-center rounded-4xl">
         <div
           className="w-full h-[90vh] mt-16 px-6 md:px-10 rounded-4xl shadow-2xl shadow-black bg-cover relative transition-all duration-700 ease-in-out overflow-hidden"

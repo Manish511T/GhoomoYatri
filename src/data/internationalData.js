@@ -1,309 +1,314 @@
 const destinations = [
-  {
-    id: "paris",
-    title: "Paris",
-    intro:"PARIS",
-    subtitle: "France",
-    image: "paris.jpg",
-    overview: [
-    "Paris, the capital of France, is a global icon of art, fashion, gastronomy, and culture. Nestled along the Seine River, the city is renowned for its timeless beauty, historic landmarks, and vibrant neighborhoods. Known as the 'City of Light', Paris offers a captivating blend of old-world charm and modern sophistication.",
-
-    "The city's most famous attractions include the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Visitors can stroll along the Champs-Élysées, admire the Arc de Triomphe, or enjoy a scenic cruise on the Seine. Each arrondissement (district) has its own character, from the bohemian vibes of Montmartre to the intellectual allure of the Latin Quarter.",
-
-    "Paris is a cultural treasure trove. The Louvre houses masterpieces like the Mona Lisa and Venus de Milo, while the Musée d'Orsay showcases Impressionist art. The city's architecture ranges from Gothic cathedrals to Haussmannian boulevards and modern marvels like the Centre Pompidou.",
-
-    "For food lovers, Paris is a paradise. From buttery croissants and macarons to gourmet dining at Michelin-starred restaurants, the culinary scene is world-class. Cafés line every street, offering perfect spots for people-watching and sipping espresso.",
-
-    "Shopping in Paris is an experience in itself. Explore luxury boutiques on Rue du Faubourg Saint-Honoré, vintage finds in Le Marais, and bustling flea markets like Marché aux Puces. Fashionistas flock to Galeries Lafayette and Printemps for the latest trends.",
-
-    "Paris is well-connected via Charles de Gaulle and Orly airports, extensive metro and RER networks, and high-speed trains like the TGV. Whether you're seeking romance, inspiration, or adventure, Paris promises an unforgettable journey through history, art, and elegance."
-  ],
-
-    
-    famousPlaces:  [
-    'Eiffel Tower',
-    'Louvre Museum',
-    'Notre-Dame Cathedral',
-    'Arc de Triomphe',
-    'Montmartre',
-    'Sacré-Cœur Basilica',
-    'Champs-Élysées',
-    'Palace of Versailles',
-    'Sainte-Chapelle',
-    'Luxembourg Gardens',
-    'Seine River Cruise',
-    'Centre Pompidou',
-    'Panthéon',
-    'Tuileries Garden',
-    'Palais Garnier',
-    'Latin Quarter',
-    'Place de la Concorde',
-    'Moulin Rouge',
-    'Disneyland Paris'
-  ],
-
-    mapEmbedUrl: 'https://maps.google.com/maps?q=paris&output=embed'
-
-    
-  },
-  {
-  id: 'tokyo',
-  title: 'Tokyo City Guide',
-  intro: 'Tokyo',
-  subtitle: 'Tradition Meets Futuristic Wonder',
-  image: 'tokyo.jpg',
+{
+  id: 'dubai',
+  title: 'Dubai City Guide',
+  intro: 'Dubai',
+  subtitle: 'Skyscrapers, Souks and Desert Dreams',
+  image: 'Dubai.jpg',
   overview: [
-    "Tokyo, the capital of Japan, is a dazzling metropolis where ancient traditions blend seamlessly with cutting-edge innovation. Located on the eastern coast of Honshu Island, Tokyo is the heart of Japan’s political, economic, and cultural life. With over 14 million residents in the city proper and more than 37 million in the Greater Tokyo Area, it’s one of the most populous urban regions in the world.",
+    "Dubai, the most populous city in the United Arab Emirates, is a dazzling fusion of futuristic architecture, luxury living, and rich cultural heritage. Located on the southeastern coast of the Persian Gulf, Dubai has transformed from a modest fishing village into a global hub for tourism, trade, and innovation.",
 
-    "Tokyo offers a rich tapestry of experiences. From the historic temples of Asakusa and the serene Meiji Shrine to the neon-lit streets of Shibuya and the high-tech hub of Akihabara, every district has its own unique vibe. The city’s skyline is punctuated by iconic structures like Tokyo Tower and Tokyo Skytree, offering panoramic views of the sprawling cityscape.",
+    "The city’s skyline is dominated by the **Burj Khalifa**, the tallest building in the world, and landmarks like the **Burj Al Arab**, **Dubai Frame**, and **Museum of the Future**. Visitors can explore traditional neighborhoods like **Al Fahidi Historical District**, shop in gold and spice souks, or cruise along **Dubai Creek** in a wooden abra.",
 
-    "Cultural enthusiasts can explore world-class museums such as the Tokyo National Museum and Edo-Tokyo Museum, while nature lovers can unwind in beautifully landscaped gardens like Shinjuku Gyoen and Ueno Park. The Imperial Palace, surrounded by moats and gardens, stands as a symbol of Japan’s imperial heritage.",
+    "Dubai offers world-class shopping at **The Dubai Mall** and **Mall of the Emirates**, which also houses **Ski Dubai**, an indoor ski resort. The city’s beaches—like **Jumeirah Beach** and **La Mer**—are perfect for sunbathing, water sports, and seaside dining.",
 
-    "Tokyo is a paradise for food lovers. From Michelin-starred restaurants to street-side ramen shops, the culinary scene is diverse and exquisite. Don’t miss out on sushi at Tsukiji Outer Market or traditional sweets in Yanaka Ginza.",
+    "Adventure seekers can head into the desert for dune bashing, camel rides, and stargazing at Bedouin-style camps. The **Dubai Desert Conservation Reserve** offers eco-tours and wildlife spotting, while skydiving over **Palm Jumeirah** delivers unmatched aerial views.",
 
-    "Shopping in Tokyo ranges from luxury brands in Ginza to quirky fashion in Harajuku and anime merchandise in Akihabara. The city’s vibrant nightlife includes izakayas, karaoke bars, and themed cafes that cater to every interest.",
+    "Dubai’s culinary scene is as diverse as its population, with flavors from across the globe. From Michelin-starred restaurants to street food in **Al Karama**, the city caters to every palate. Cultural festivals, art galleries, and live performances add vibrancy to its cosmopolitan charm.",
 
-    "Tokyo is well-connected via Haneda and Narita airports, an extensive metro and rail network, and the famous Shinkansen bullet trains. Whether you're seeking tradition, technology, or trendsetting culture, Tokyo promises an unforgettable journey through the heart of Japan."
+    "Dubai is served by **Dubai International Airport (DXB)**, one of the busiest in the world, and boasts a modern metro, tram, and water taxi system. Whether you're chasing luxury, tradition, or adrenaline, Dubai promises a dynamic and unforgettable experience."
   ],
 
   famousPlaces: [
-    'Tokyo Skytree',
-    'Tokyo Tower',
-    'Shibuya Crossing',
-    'Meiji Shrine',
-    'Senso-ji Temple',
-    'Imperial Palace',
-    'Ueno Park',
-    'Tokyo National Museum',
-    'Edo-Tokyo Museum',
-    'Akihabara',
-    'Ginza',
-    'Harajuku',
-    'Shinjuku Gyoen',
-    'Odaiba',
-    'Tsukiji Outer Market',
-    'Roppongi Hills',
-    'Asakusa',
-    'Yanaka Ginza',
-    'Ghibli Museum'
+    'Burj Khalifa',
+    'Burj Al Arab',
+    'Dubai Mall',
+    'Dubai Fountain',
+    'Palm Jumeirah',
+    'Museum of the Future',
+    'Dubai Frame',
+    'Dubai Marina',
+    'Jumeirah Beach',
+    'Al Fahidi Historical District',
+    'Dubai Creek',
+    'Gold Souk',
+    'Spice Souk',
+    'Ski Dubai',
+    'Global Village',
+    'Miracle Garden',
+    'Dubai Aquarium & Underwater Zoo',
+    'Atlantis Aquaventure Waterpark',
+    'Dubai Desert Conservation Reserve'
   ],
-  mapEmbedUrl: 'https://maps.google.com/maps?q=tokyo&output=embed'
+  mapEmbedUrl: 'https://maps.google.com/maps?q=dubai&output=embed'
 },
 {
-  id: 'cape-town',
-  title: 'Cape Town City Guide',
-  intro: 'Cape Town',
-  subtitle: 'Mountains, Oceans and Cultural Magic',
-  image: 'cape-town.jpg',
+  id: 'indonesia',
+  title: 'Indonesia Travel Guide',
+  intro: 'Indonesia',
+  subtitle: 'Islands of Fire, Forests, and Spiritual Wonder',
+  image: 'Indonesia.jpg',
   overview: [
-    "Cape Town, the legislative capital of South Africa, is a stunning coastal city nestled between the Atlantic Ocean and the iconic Table Mountain. Known as the 'Mother City', it offers a rich blend of natural beauty, cultural diversity, and historical depth. With its Mediterranean climate and dramatic landscapes, Cape Town is consistently ranked among the world’s top travel destinations.",
+    "Indonesia, the world’s largest archipelagic nation, spans over **17,000 islands** across Southeast Asia and Oceania. From the lush jungles of Sumatra to the volcanic peaks of Java, the coral-rich waters of Raja Ampat to the spiritual serenity of Bali, Indonesia is a mosaic of cultures, landscapes, and biodiversity.",
 
-    "The city’s most famous landmark is Table Mountain, which towers over the city and offers panoramic views from its summit. Visitors can hike or take the cableway to the top. Nearby, Lion’s Head and Signal Hill provide additional scenic viewpoints. The V&A Waterfront is a bustling hub of shopping, dining, and entertainment, while Robben Island, a UNESCO World Heritage Site, offers a sobering look into South Africa’s apartheid history.",
+    "The capital city **Jakarta** is a bustling metropolis blending colonial heritage with modern skyscrapers. In contrast, **Yogyakarta** is the cultural heart of Java, home to the majestic **Borobudur** and **Prambanan** temples. **Bali** enchants with its beaches, rice terraces, and Hindu traditions, while **Lombok** and the **Gili Islands** offer quieter escapes.",
 
-    "Cape Town’s neighborhoods are full of character. Bo-Kaap dazzles with its brightly colored houses and Cape Malay heritage, while the City Bowl and Gardens area offer trendy cafes and art galleries. The city’s beaches—like Clifton, Camps Bay, and Muizenberg—are perfect for sunbathing, surfing, and sunset views.",
+    "Nature lovers can trek through **Komodo National Park** to spot the legendary Komodo dragons, dive in **Bunaken Marine Park**, or hike the volcanic trails of **Mount Bromo** and **Mount Rinjani**. The rainforests of **Sumatra** and **Kalimantan** shelter orangutans, tigers, and rare bird species.",
 
-    "Nature lovers can explore Kirstenbosch Botanical Gardens, hike in Table Mountain National Park, or take a drive along Chapman’s Peak for breathtaking coastal views. Wildlife encounters include penguins at Boulders Beach and marine safaris in False Bay.",
+    "Indonesia’s cuisine is a flavorful fusion of spices, coconut, and chili—try **nasi goreng**, **satay**, and **rendang**. Each region has its own culinary identity, shaped by indigenous traditions and colonial influences.",
 
-    "Cape Town’s culinary scene is vibrant and diverse, with influences from African, Dutch, Malay, and Indian cuisines. Local favorites include bobotie, biltong, and fresh seafood. The city is also a gateway to the nearby Cape Winelands, offering world-class wine tasting experiences.",
+    "With over **300 ethnic groups** and hundreds of languages, Indonesia celebrates diversity through festivals, crafts, and rituals. The national motto, *Bhinneka Tunggal Ika* (Unity in Diversity), reflects its spirit of harmony.",
 
-    "Cape Town is accessible via Cape Town International Airport and has a well-developed road network. Whether you're drawn by its natural wonders, cultural richness, or historical significance, Cape Town promises a captivating and unforgettable journey."
+    "Indonesia is served by major airports like **Soekarno-Hatta (CGK)** in Jakarta and **Ngurah Rai (DPS)** in Bali. Domestic flights, ferries, and buses connect the islands, making it ideal for multi-stop adventures."
   ],
 
   famousPlaces: [
-    'Table Mountain',
-    'Robben Island',
-    'V&A Waterfront',
-    'Bo-Kaap',
-    'Kirstenbosch Botanical Gardens',
-    'Cape Point',
-    'Boulders Beach',
-    'Clifton Beach',
-    'Camps Bay',
-    'Muizenberg Beach',
-    'Castle of Good Hope',
-    'District Six Museum',
-    'Chapman’s Peak Drive',
-    'Lion’s Head',
-    'Signal Hill',
-    'Two Oceans Aquarium',
-    'Company’s Garden',
-    'Iziko South African Museum',
-    'Greenmarket Square'
+    'Borobudur Temple',
+    'Prambanan Temple',
+    'Mount Bromo',
+    'Mount Rinjani',
+    'Komodo National Park',
+    'Raja Ampat Islands',
+    'Lake Toba',
+    'Bali (Ubud, Uluwatu, Seminyak)',
+    'Gili Islands',
+    'Yogyakarta',
+    'Jakarta',
+    'Lombok',
+    'Bunaken Marine Park',
+    'Tana Toraja',
+    'Tanjung Puting National Park',
+    'Kelimutu Crater Lakes',
+    'Tanah Lot Temple',
+    'Sacred Monkey Forest Sanctuary',
+    'Nusa Penida',
+    'Anak Krakatau Volcano'
   ],
-  mapEmbedUrl: 'https://maps.google.com/maps?q=cape+town&output=embed'
+  mapEmbedUrl: 'https://maps.google.com/maps?q=indonesia&output=embed'
 },
 {
-  id: 'newYork',
-  title: 'New York City Guide',
-  intro: 'New York',
-  subtitle: 'The City That Never Sleeps',
-  bgImage: 'NewYork.jpg',
+  id: 'mauritius',
+  title: 'Mauritius Travel Guide',
+  intro: 'Mauritius',
+  subtitle: 'Island of Coral Reefs, Culture, and Creole Charm',
+  image: 'Mauritius.jpg',
   overview: [
-    "New York City, often called the 'Big Apple', is the most populous city in the United States and a global hub for finance, culture, fashion, and entertainment. Located at the mouth of the Hudson River in southeastern New York State, NYC is made up of five boroughs—Manhattan, Brooklyn, Queens, The Bronx, and Staten Island—each with its own unique character and charm.",
+    "Mauritius, a volcanic island nation in the Indian Ocean, lies about 2,000 km off the southeast coast of Africa. Known for its **pristine beaches**, **lush forests**, and **multicultural heritage**, it’s a paradise that blends natural beauty with vibrant traditions.",
 
-    "Manhattan is the beating heart of the city, home to iconic landmarks like Times Square, Central Park, and the Empire State Building. Brooklyn offers a vibrant arts scene, trendy neighborhoods, and the famous Brooklyn Bridge. Queens is known for its cultural diversity and culinary delights, while The Bronx boasts Yankee Stadium and the birthplace of hip-hop. Staten Island provides a quieter, suburban feel with scenic parks and ferry views.",
+    "The capital **Port Louis** is a bustling port city with colonial architecture, lively markets, and cultural landmarks like the **Aapravasi Ghat** and **Le Caudan Waterfront**. Inland, the island reveals dramatic landscapes—**Black River Gorges National Park**, **Chamarel Waterfalls**, and the surreal **Seven Coloured Earths**.",
 
-    "New York City is rich in history and culture. From the Statue of Liberty and Ellis Island to the 9/11 Memorial and Museum, the city tells stories of immigration, resilience, and transformation. Museums like The Met, MoMA, and the American Museum of Natural History showcase world-class art and science.",
+    "Mauritius is a haven for beach lovers and water sports enthusiasts. From the turquoise lagoons of **Flic en Flac** and **Belle Mare** to the kite-surfing mecca of **Le Morne**, the coastline offers endless adventure. Offshore, **Île aux Cerfs** and **Île aux Aigrettes** provide idyllic escapes.",
 
-    "The city’s culinary scene is unmatched—bagels, pizza, street food, and Michelin-starred restaurants coexist in delicious harmony. Shopping ranges from luxury boutiques on Fifth Avenue to quirky finds in SoHo and flea markets in Brooklyn.",
+    "Wildlife thrives in protected reserves like **La Vanille Nature Park**, home to giant tortoises and crocodiles, and **Île aux Aigrettes**, where conservation efforts preserve endemic species. The extinct **dodo** bird remains a national symbol, and its legacy lives on in museums and folklore.",
 
-    "Entertainment is everywhere: Broadway shows, jazz clubs, rooftop bars, and comedy venues keep the city buzzing day and night. Nature lovers can escape to Central Park, the High Line, or take a stroll along the Hudson River Greenway.",
+    "Mauritian cuisine is a flavorful fusion of **Indian**, **Creole**, **Chinese**, and **French** influences. Try dishes like **dholl puri**, **rougaille**, and **gateaux piments** at street stalls or savor seafood at beachside shacks and fine-dining restaurants.",
 
-    "New York is served by major airports like JFK, LaGuardia, and Newark, and has an extensive subway and bus network. Whether you're chasing dreams, exploring culture, or soaking in the skyline, New York City offers an unforgettable urban adventure."
+    "Mauritius is served by **Sir Seewoosagur Ramgoolam International Airport (MRU)** and has a well-developed road network. With a high Human Development Index and peaceful reputation, it’s one of Africa’s most developed and welcoming destinations."
   ],
 
   famousPlaces: [
-    'Statue of Liberty',
-    'Central Park',
-    'Empire State Building',
-    'Times Square',
-    'Brooklyn Bridge',
-    'The Metropolitan Museum of Art',
-    'Museum of Modern Art (MoMA)',
-    'American Museum of Natural History',
-    'Rockefeller Center',
-    'Broadway Theater District',
-    'One World Observatory',
-    '9/11 Memorial & Museum',
-    'Grand Central Terminal',
-    'Fifth Avenue',
-    'Wall Street',
-    'High Line',
-    'Bryant Park',
-    'Flatiron Building',
-    'St. Patrick’s Cathedral'
+    'Le Morne Brabant',
+    'Chamarel Seven Coloured Earths',
+    'Black River Gorges National Park',
+    'Île aux Cerfs',
+    'Île aux Aigrettes',
+    'Sir Seewoosagur Ramgoolam Botanical Garden',
+    'Port Louis',
+    'Trou aux Cerfs Volcano',
+    'Grand Bassin (Ganga Talao)',
+    'Flic en Flac Beach',
+    'Belle Mare Beach',
+    'La Vanille Nature Park',
+    'Pereybere Beach',
+    'Casela Nature Park',
+    'Eureka House',
+    'Underwater Waterfall Illusion',
+    'Tamarind Falls',
+    'Cap Malheureux',
+    'Notre-Dame Auxiliatrice Church',
+    'Albion Lighthouse'
   ],
-  mapEmbedUrl: 'https://maps.google.com/maps?q=new+york&output=embed'
+  mapEmbedUrl: 'https://maps.google.com/maps?q=mauritius&output=embed'
 },
 {
-  id: 'new-york',
-  title: 'New York City Guide',
-  intro: 'New York',
-  subtitle: 'The City That Never Sleeps',
-  image: 'New-york.jpg',
+  id: 'singapore',
+  title: 'Singapore Travel Guide',
+  intro: 'Singapore',
+  subtitle: 'Lion City of Innovation, Gardens, and Global Culture',
+  image: 'Singapore.jpg',
   overview: [
-    "New York City, often called the 'Big Apple', is the most populous city in the United States and a global hub for finance, culture, fashion, and entertainment. Located at the mouth of the Hudson River in southeastern New York State, NYC is made up of five boroughs—Manhattan, Brooklyn, Queens, The Bronx, and Staten Island—each with its own unique character and charm.",
+    "Singapore, a vibrant city-state at the southern tip of the Malay Peninsula, is a dazzling blend of **modernity and tradition**. Known as the 'Lion City', it’s a global hub for finance, technology, and tourism, with a reputation for cleanliness, safety, and multicultural harmony.",
 
-    "Manhattan is the beating heart of the city, home to iconic landmarks like Times Square, Central Park, and the Empire State Building. Brooklyn offers a vibrant arts scene, trendy neighborhoods, and the famous Brooklyn Bridge. Queens is known for its cultural diversity and culinary delights, while The Bronx boasts Yankee Stadium and the birthplace of hip-hop. Staten Island provides a quieter, suburban feel with scenic parks and ferry views.",
+    "The city’s skyline is defined by architectural marvels like **Marina Bay Sands**, **Gardens by the Bay**, and the **Singapore Flyer**. The **Supertree Grove** and **Cloud Forest** offer futuristic green spaces, while **Sentosa Island** delivers beachside fun, theme parks, and luxury resorts.",
 
-    "New York City is rich in history and culture. From the Statue of Liberty and Ellis Island to the 9/11 Memorial and Museum, the city tells stories of immigration, resilience, and transformation. Museums like The Met, MoMA, and the American Museum of Natural History showcase world-class art and science.",
+    "Singapore’s cultural districts—**Chinatown**, **Little India**, and **Kampong Glam**—celebrate its diverse heritage through temples, mosques, street art, and culinary delights. The **National Gallery**, **Asian Civilisations Museum**, and **ArtScience Museum** showcase its artistic and historical depth.",
 
-    "The city’s culinary scene is unmatched—bagels, pizza, street food, and Michelin-starred restaurants coexist in delicious harmony. Shopping ranges from luxury boutiques on Fifth Avenue to quirky finds in SoHo and flea markets in Brooklyn.",
+    "Nature lovers can explore **Singapore Botanic Gardens**, a UNESCO World Heritage Site, or hike through **MacRitchie Reservoir** and **Bukit Timah Nature Reserve**. The **Night Safari** and **River Wonders** offer immersive wildlife experiences.",
 
-    "Entertainment is everywhere: Broadway shows, jazz clubs, rooftop bars, and comedy venues keep the city buzzing day and night. Nature lovers can escape to Central Park, the High Line, or take a stroll along the Hudson River Greenway.",
+    "Singapore’s food scene is legendary—from hawker centers like **Maxwell Food Centre** and **Lau Pa Sat** to Michelin-starred restaurants. Dishes like **chilli crab**, **laksa**, and **Hainanese chicken rice** reflect its multicultural roots.",
 
-    "New York is served by major airports like JFK, LaGuardia, and Newark, and has an extensive subway and bus network. Whether you're chasing dreams, exploring culture, or soaking in the skyline, New York City offers an unforgettable urban adventure."
+    "With four official languages (English, Malay, Mandarin, Tamil), Singapore is a model of inclusivity. Its efficient public transport, world-class airport (**Changi**), and smart city infrastructure make it a seamless destination for travelers."
   ],
 
   famousPlaces: [
-    'Statue of Liberty',
-    'Central Park',
-    'Empire State Building',
-    'Times Square',
-    'Brooklyn Bridge',
-    'The Metropolitan Museum of Art',
-    'Museum of Modern Art (MoMA)',
-    'American Museum of Natural History',
-    'Rockefeller Center',
-    'Broadway Theater District',
-    'One World Observatory',
-    '9/11 Memorial & Museum',
-    'Grand Central Terminal',
-    'Fifth Avenue',
-    'Wall Street',
-    'High Line',
-    'Bryant Park',
-    'Flatiron Building',
-    'St. Patrick’s Cathedral'
+    'Marina Bay Sands',
+    'Gardens by the Bay',
+    'Supertree Grove',
+    'Singapore Flyer',
+    'Sentosa Island',
+    'Universal Studios Singapore',
+    'Singapore Botanic Gardens',
+    'Cloud Forest',
+    'Chinatown',
+    'Little India',
+    'Kampong Glam',
+    'National Gallery Singapore',
+    'ArtScience Museum',
+    'Asian Civilisations Museum',
+    'Singapore Zoo',
+    'Night Safari',
+    'River Wonders',
+    'MacRitchie Reservoir',
+    'Bukit Timah Nature Reserve',
+    'Hawker Centres (Maxwell, Lau Pa Sat)'
   ],
-  mapEmbedUrl: 'https://maps.google.com/maps?q=new+york&output=embed'
+  mapEmbedUrl: 'https://maps.google.com/maps?q=singapore&output=embed'
 },
 {
-  id: 'rio',
-  title: 'Rio de Janeiro City Guide',
-  intro: 'Rio de Janeiro',
-  subtitle: 'Samba, Sunsets and Soul',
-  image: 'Brazil.jpg',
+  id: 'sri-lanka',
+  title: 'Sri Lanka Travel Guide',
+  intro: 'Sri Lanka',
+  subtitle: 'Island of Heritage, Hills, and Ocean Whispers',
+  Image: 'Sri-Lanka.jpg',
   overview: [
-    "Rio de Janeiro, Brazil’s iconic coastal city, is a vibrant blend of natural beauty, cultural richness, and infectious energy. Nestled between lush mountains and golden beaches, Rio is known as the 'Cidade Maravilhosa'—the Marvelous City—for good reason.",
+    "Sri Lanka, the **Pearl of the Indian Ocean**, is a compact island nation rich in history, biodiversity, and cultural depth. Located just off the southern coast of India, it offers a stunning mix of **beaches**, **rainforests**, **tea plantations**, and **ancient cities**.",
 
-    "The city’s most famous landmarks include the towering Christ the Redeemer statue atop Corcovado Mountain and the dramatic Sugarloaf Mountain, both offering panoramic views of the city and sea. Rio’s coastline is lined with legendary beaches like Copacabana, Ipanema, and Leblon, where locals and visitors soak up the sun and samba rhythms.",
+    "The capital **Colombo** is a vibrant port city with colonial architecture, bustling markets, and seaside promenades like **Galle Face Green**. Inland, the **Cultural Triangle**—**Anuradhapura**, **Polonnaruwa**, and **Sigiriya**—reveals millennia-old temples, stupas, and royal ruins.",
 
-    "Rio pulses with culture and history. From the colonial charm of Santa Teresa and the colorful tiles of Escadaria Selarón to the grandeur of Theatro Municipal and the modern marvel of the Museum of Tomorrow, the city is a feast for the senses. The annual Carnival is a world-renowned spectacle of music, dance, and dazzling costumes.",
+    "Nature lovers can explore **Yala National Park** for leopards and elephants, hike **Ella Rock** and **Little Adam’s Peak**, or relax in the cool climes of **Nuwara Eliya**, known as 'Little England'. The **Knuckles Mountain Range** and **Horton Plains** offer misty trails and dramatic vistas.",
 
-    "Nature lovers can explore the Tijuca National Park, the world’s largest urban rainforest, or hike to viewpoints like Pedra Bonita and Vista Chinesa. The city also offers serene escapes like Parque Lage and the Botanical Garden, rich with tropical flora.",
+    "Sri Lanka’s coastline is dotted with idyllic beaches—**Mirissa**, **Bentota**, **Arugam Bay**, and **Trincomalee**—perfect for surfing, whale watching, and sunbathing. The southern city of **Galle** boasts a UNESCO-listed Dutch Fort with cobbled streets and ocean views.",
 
-    "Rio’s cuisine is bold and flavorful—feijoada, pão de queijo, and fresh seafood are staples. Street snacks like tapioca crisps and iced mate tea are local favorites. The nightlife ranges from beachside bars to samba clubs in Lapa and rooftop lounges with breathtaking views.",
+    "The island’s cuisine is a fiery fusion of **rice**, **curry**, **coconut**, and **spices**—try **kottu roti**, **hoppers**, and **pol sambol**. Cultural festivals like **Esala Perahera** in Kandy showcase traditional dance, drumming, and elephant processions.",
 
-    "Rio is served by Galeão International Airport and Santos Dumont Airport, and has a robust metro and bus network. Whether you're chasing sunsets, dancing to samba, or exploring cultural gems, Rio de Janeiro promises a journey that’s unforgettable and full of heart."
+    "Sri Lanka is served by **Bandaranaike International Airport (CMB)** near Colombo, and has a growing network of highways and scenic railways. With visa-free access now extended to 40 countries, it’s more accessible than ever for global travelers."
   ],
 
   famousPlaces: [
-    'Christ the Redeemer',
-    'Sugarloaf Mountain',
-    'Copacabana Beach',
-    'Ipanema Beach',
-    'Escadaria Selarón',
-    'Tijuca National Park',
-    'Santa Teresa',
-    'Museum of Tomorrow',
-    'Theatro Municipal',
-    'Botanical Garden',
-    'Parque Lage',
-    'Maracanã Stadium',
-    'Lapa Arches',
-    'Vista Chinesa',
-    'Pedra Bonita',
-    'Leblon Beach',
-    'Rodrigo de Freitas Lagoon',
-    'Forte de Copacabana',
-    'Rio Scenarium'
+    'Sigiriya Rock Fortress',
+    'Dambulla Cave Temple',
+    'Temple of the Tooth (Kandy)',
+    'Galle Dutch Fort',
+    'Yala National Park',
+    'Udawalawe National Park',
+    'Ella Rock',
+    'Little Adam’s Peak',
+    'Nine Arches Bridge',
+    'Nuwara Eliya',
+    'Horton Plains National Park',
+    'Knuckles Mountain Range',
+    'Mirissa Beach',
+    'Arugam Bay',
+    'Bentota Beach',
+    'Trincomalee',
+    'Anuradhapura',
+    'Polonnaruwa',
+    'Ravana Falls',
+    'Royal Botanical Gardens (Peradeniya)'
   ],
-  mapEmbedUrl: 'https://maps.google.com/maps?q=rio+de+janeiro&output=embed'
+  mapEmbedUrl: 'https://maps.google.com/maps?q=sri+lanka&output=embed'
 },
 {
-  id: 'sydney',
-  title: 'Sydney City Guide',
-  intro: 'Sydney',
-  subtitle: 'Harbour Views and Coastal Vibes',
-  image: 'sedney.jpg',
+  id: 'thailand',
+  title: 'Thailand Travel Guide',
+  intro: 'Thailand',
+  subtitle: 'Land of Smiles, Temples, and Tropical Escapes',
+  image: 'thailand.jpg',
   overview: [
-    "Sydney, the capital of New South Wales, is Australia’s largest and most iconic city. Nestled on the southeastern coast, it’s famed for its stunning harbour, golden beaches, and vibrant urban culture. With a rich Aboriginal heritage and a dynamic blend of modern architecture and colonial history, Sydney offers a captivating experience for every traveler.",
+    "Thailand, located in the heart of Southeast Asia, is a captivating blend of **ancient heritage**, **modern vibrancy**, and **natural beauty**. From the bustling streets of **Bangkok** to the serene beaches of the south and the misty mountains of the north, Thailand offers something for every traveler.",
 
-    "The city’s most recognizable landmarks include the Sydney Opera House and Sydney Harbour Bridge, both set against the sparkling waters of Sydney Harbour. Visitors can enjoy ferry rides to Manly, climb the Harbour Bridge, or relax at world-famous beaches like Bondi and Coogee.",
+    "The capital **Bangkok** is a dynamic metropolis known for its ornate temples like **Wat Arun** and **Wat Phra Kaew**, vibrant street markets, and rooftop bars with panoramic views. The **Grand Palace** and **Chatuchak Weekend Market** are must-visits for culture and shopping enthusiasts.",
 
-    "Sydney’s neighborhoods each have their own charm. The Rocks is steeped in colonial history, while Darling Harbour buzzes with entertainment and waterfront dining. Barangaroo offers a modern twist with upscale restaurants and cultural spaces, and Paddington is known for its boutique shopping and Victorian terraces.",
+    "In the north, **Chiang Mai** and **Chiang Rai** showcase traditional Thai culture, hill tribes, and stunning temples like the **White Temple (Wat Rong Khun)**. The **Mae Hong Son Loop** and **Pai** offer scenic drives, waterfalls, and laid-back vibes.",
 
-    "Nature lovers can explore the Royal Botanic Garden, hike in the nearby Blue Mountains, or visit Taronga Zoo for close encounters with native wildlife. The city is surrounded by national parks and coastal walks, making it a haven for outdoor enthusiasts.",
+    "Southern Thailand is famed for its islands—**Phuket**, **Krabi**, **Koh Phi Phi**, and **Koh Samui**—each with turquoise waters, limestone cliffs, and vibrant nightlife. **Railay Beach**, **Ao Nang**, and **Koh Tao** are perfect for diving, kayaking, and beach hopping.",
 
-    "Sydney’s culinary scene is diverse and world-class. From fresh seafood and multicultural street food to fine dining with harbour views, the city caters to every palate. Don’t miss local favorites like barramundi, meat pies, and lamingtons.",
+    "Nature lovers can explore **Khao Yai National Park**, **Erawan Falls**, and **Doi Inthanon**, Thailand’s highest peak. Wildlife sanctuaries, elephant camps, and jungle treks offer immersive eco-experiences.",
 
-    "Sydney is served by Kingsford Smith Airport and has an extensive public transport system including trains, buses, ferries, and a light rail network. Whether you're chasing surf, skyline views, or cultural treasures, Sydney delivers an unforgettable blend of adventure and elegance."
+    "Thai cuisine is globally adored—try **pad Thai**, **green curry**, **som tam**, and **mango sticky rice** at local eateries or bustling night markets. The country’s culinary diversity reflects its regional flavors and multicultural influences.",
+
+    "Thailand is served by major airports like **Suvarnabhumi (BKK)** and **Don Mueang (DMK)** in Bangkok, and has an extensive network of trains, buses, and ferries. With its warm hospitality and rich tapestry of experiences, Thailand truly lives up to its nickname—the *Land of Smiles*."
   ],
 
   famousPlaces: [
-    'Sydney Opera House',
-    'Sydney Harbour Bridge',
-    'Bondi Beach',
-    'Darling Harbour',
-    'The Rocks',
-    'Royal Botanic Garden',
-    'Taronga Zoo',
-    'Manly Beach',
-    'Circular Quay',
-    'Queen Victoria Building',
-    'Art Gallery of New South Wales',
-    'Museum of Contemporary Art',
-    'Barangaroo Reserve',
-    'Hyde Park',
-    'Sea Life Sydney Aquarium',
-    'Chinese Garden of Friendship',
-    'Blue Mountains',
-    'Cockatoo Island',
-    'Sydney Tower Eye'
+    'Bangkok (Grand Palace, Wat Arun, Wat Phra Kaew)',
+    'Chiang Mai (Doi Suthep, Night Bazaar)',
+    'Chiang Rai (White Temple, Blue Temple)',
+    'Ayutthaya Historical Park',
+    'Sukhothai Historical Park',
+    'Phuket',
+    'Krabi (Railay Beach, Ao Nang)',
+    'Koh Phi Phi',
+    'Koh Samui',
+    'Koh Tao',
+    'Pai',
+    'Mae Hong Son Loop',
+    'Khao Yai National Park',
+    'Erawan Falls',
+    'Doi Inthanon',
+    'Floating Markets (Damnoen Saduak, Amphawa)',
+    'Hua Hin Beach',
+    'Mu Ko Ang Thong Marine Park',
+    'Wat Rong Khun (White Temple)',
+    'Wat Pho (Reclining Buddha)'
   ],
-  mapEmbedUrl: 'https://maps.google.com/maps?q=sydney&output=embed'
+  mapEmbedUrl: 'https://maps.google.com/maps?q=thailand&output=embed'
+},
+{
+  id: 'vietnam',
+  title: 'Vietnam Travel Guide',
+  intro: 'Vietnam',
+  subtitle: 'From Rice Terraces to River Deltas',
+  image: 'Vietnam.jpg',
+  overview: [
+    "Vietnam, a slender S-shaped country in Southeast Asia, is a land of **diverse landscapes**, **rich history**, and **vibrant culture**. From the misty mountains of the north to the tropical Mekong Delta in the south, Vietnam offers a dynamic blend of natural beauty and urban energy.",
+
+    "The capital **Hanoi** charms with its colonial architecture, lakes, and street food, while **Ho Chi Minh City (Saigon)** pulses with modernity and historical depth. In central Vietnam, **Hue** preserves imperial heritage, and **Hoi An** enchants with lantern-lit streets and tailor shops.",
+
+    "**Halong Bay**, a UNESCO World Heritage Site, features limestone karsts rising from emerald waters—perfect for cruises and kayaking. Inland, **Sapa** and **Ha Giang** offer trekking through rice terraces and ethnic villages, while **Phong Nha-Ke Bang National Park** hides some of the world’s largest caves.",
+
+    "Vietnam’s coastline is dotted with stunning beaches—**Da Nang**, **Nha Trang**, and **Phu Quoc** are favorites for sun-seekers and divers. The **Mekong Delta** in the south is a maze of rivers, floating markets, and lush countryside.",
+
+    "Vietnamese cuisine is globally adored—dishes like **pho**, **banh mi**, **bun cha**, and **goi cuon** reflect regional flavors and French colonial influence. Street food culture thrives in cities and villages alike.",
+
+    "Vietnam is served by major airports like **Noi Bai (HAN)** in Hanoi and **Tan Son Nhat (SGN)** in Ho Chi Minh City. With a growing rail network, domestic flights, and scenic motorbike routes, it’s ideal for both slow travel and fast-paced exploration."
+  ],
+
+  famousPlaces: [
+    'Halong Bay',
+    'Hanoi (Old Quarter, Hoan Kiem Lake)',
+    'Ho Chi Minh City (War Remnants Museum, Notre Dame Cathedral)',
+    'Hoi An Ancient Town',
+    'Hue Imperial Citadel',
+    'Phong Nha-Ke Bang National Park',
+    'Sapa (Rice Terraces, Fansipan)',
+    'Ha Giang Loop',
+    'Ninh Binh (Tam Coc, Trang An)',
+    'Da Nang (Marble Mountains, Golden Bridge)',
+    'Nha Trang Beach',
+    'Phu Quoc Island',
+    'Mekong Delta (Can Tho, Floating Markets)',
+    'My Son Sanctuary',
+    'Ba Be National Park',
+    'Con Dao Islands',
+    'Cao Dai Temple',
+    'Son Doong Cave',
+    'Temple of Literature (Hanoi)',
+    'Cu Chi Tunnels'
+  ],
+  mapEmbedUrl: 'https://maps.google.com/maps?q=vietnam&output=embed'
 }
+
 ];
 
 export default destinations;

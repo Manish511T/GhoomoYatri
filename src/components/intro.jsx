@@ -9,6 +9,7 @@ import Footer from './footer';
 import CallToAction from './callToAction';
 import BrandLabel from './brandLabel';
 import { Analytics } from "@vercel/analytics/react"
+// import QueryForm from './QueryForm';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -24,15 +25,15 @@ const cards = [
 ];
 
 const domesticTours = [
-    { id:'goa', name: 'Goa', tours: 19, image: 'Goa.jpg' },
-    { id:'hp', name: 'Himachal Pradesh', tours: 13, image: 'Himachal-Pradesh.jpg' },
-    { id:'northeast', name: 'Northeast', tours: 5, image: 'northeast-history.jpg' },
-    { id:'uttrakhand', name: 'Uttarakhand', tours: 13, image: 'Uttarakhand.webp' },
-    { id:'Ladakh', name: 'Ladakh', tours: 7, image: 'Pangong-Lake.jpg' },
-    { id:'kashmir', name: 'Kashmir', tours: 9, image: 'Kashmir.jpg' },
-    { id:'kerala', name: 'Kerala', tours: 7, image: 'kerala.webp' },
-    { id:'andaman', name: 'Andaman', tours: 5, image: 'Andaman.jpg' },
-    { id:'rajasthan', name: 'Rajasthan', tours: 19, image: 'Rajasthan.jpg' },
+    { id: 'goa', name: 'Goa', tours: 19, image: 'Goa.jpg' },
+    { id: 'hp', name: 'Himachal Pradesh', tours: 13, image: 'Himachal-Pradesh.jpg' },
+    { id: 'northeast', name: 'Northeast', tours: 5, image: 'northeast-history.jpg' },
+    { id: 'uttrakhand', name: 'Uttarakhand', tours: 13, image: 'Uttarakhand.webp' },
+    { id: 'Ladakh', name: 'Ladakh', tours: 7, image: 'Pangong-Lake.jpg' },
+    { id: 'kashmir', name: 'Kashmir', tours: 9, image: 'Kashmir.jpg' },
+    { id: 'kerala', name: 'Kerala', tours: 7, image: 'kerala.webp' },
+    { id: 'andaman', name: 'Andaman', tours: 5, image: 'Andaman.jpg' },
+    { id: 'rajasthan', name: 'Rajasthan', tours: 19, image: 'Rajasthan.jpg' },
 ];
 
 const tourCategories = [
@@ -106,7 +107,9 @@ function Introduction() {
         <>
             <Navbar />
             <div className="hero-container relative h-screen w-screen overflow-hidden rounded-b-2xl bg-black text-white">
-
+                {/* <div className='absolute top-[100%] left-1/2  -translate-x-1/2 -translate-y-1/2 w-full h-full z-[24]'>
+                    <QueryForm />
+                </div> */}
                 {/* Background Image */}
                 <div className="bg-img-container  h-full w-full absolute inset-0 z-0">
                     <img src="background1.png" alt="Background" className="bg-img h-full w-full object-cover" />
@@ -149,7 +152,6 @@ function Introduction() {
                 <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-emerald-900 blur-3xl z-[23]" />
 
             </div>
-
             {/* Popular places cards */}
             <div className="popular-places text-white relative mt-5 w-full">
                 {/* Section Title */}
@@ -190,7 +192,6 @@ function Introduction() {
                     </div>
                 </div>
             </div>
-
 
 
             {/* tour category section */}
@@ -243,24 +244,24 @@ function Introduction() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-[90%] max-w-6xl">
                     {domesticTours.map((place, index) => (
                         <Link to={`/tour/${place.id}`}>
-                        <div
-                            key={index}
-                            className="relative group h-64 w-full bg-blue-500 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300"
-                        >
-                            {/* Image with overlay */}
-                            <img
-                                src={place.image}
-                                alt={place.name}
-                                className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black opacity-30"></div>
+                            <div
+                                key={index}
+                                className="relative group h-64 w-full bg-blue-500 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300"
+                            >
+                                {/* Image with overlay */}
+                                <img
+                                    src={place.image}
+                                    alt={place.name}
+                                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-black opacity-30"></div>
 
-                            {/* Centered text */}
-                            <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-                                <h2 className="text-3xl font-bold">{place.name}</h2>
-                                <p className="text-sm mt-1">{place.tours} Tours</p>
+                                {/* Centered text */}
+                                <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
+                                    <h2 className="text-3xl font-bold">{place.name}</h2>
+                                    <p className="text-sm mt-1">{place.tours} Tours</p>
+                                </div>
                             </div>
-                        </div>
                         </Link>
                     ))}
                 </div>
@@ -294,7 +295,7 @@ function Introduction() {
                     </div>
                 </div>
             </div>
-            <Analytics/>
+            <Analytics />
             <BrandLabel />
             <CallToAction />
             <Footer />

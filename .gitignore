@@ -25,6 +25,8 @@ dist-ssr
 
 #Ignore backend folder
 backend/
+QueryForm.jsx
+
 
 # sensitive files
 .env
