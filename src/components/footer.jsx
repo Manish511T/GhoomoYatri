@@ -35,7 +35,7 @@ function footer() {
                                 </svg>
                                 <div className='text-3xl'>GHOOMO YATRI</div>
                             </div>
-                            
+
                             <div className="link h-[70%]  w-full flex justify-evenly flex-wrap gap-5 overflow-y-auto mt-2">
                                 <ul className='flex flex-col gap-2'>
                                     <li className='text-lg '>ABOUT US</li>
@@ -95,8 +95,17 @@ function footer() {
                         &copy; {new Date().getFullYear()} Ghoomo Yatri. All rights reserved.
                     </p>
                     <p className='text-center text-xs mt-2'>
-                        Made with ❤️ by Manish Kumar Thakur
+                        Made with ❤️ by{' '}
+                        <a
+                            href="https://www.linkedin.com/in/manish-kumar-thakur-554036278/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:underline"
+                        >
+                            Manish Kumar Thakur
+                        </a>
                     </p>
+
                 </div>
             </footer>
         </>
